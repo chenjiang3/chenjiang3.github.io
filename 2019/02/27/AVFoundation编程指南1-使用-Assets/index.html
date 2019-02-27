@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="AVFoundation Programming Guide##创建assert对象为了创建一个由URL标识的代表任何资源的assert对象，可以使用AVURLAssert，最简单的是从文件里创建一个assert对象： 12NSURL *url = &amp;lt;#A URL that identifies an audiovisual asset such as a movie file#&amp;gt;;A">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AVFoundation编程指南1-使用 Assets">
+<meta property="og:url" content="http://yoursite.com/2019/02/27/AVFoundation编程指南1-使用-Assets/index.html">
+<meta property="og:site_name" content="Chenjiang&#39;s Blog">
+<meta property="og:description" content="AVFoundation Programming Guide##创建assert对象为了创建一个由URL标识的代表任何资源的assert对象，可以使用AVURLAssert，最简单的是从文件里创建一个assert对象： 12NSURL *url = &amp;lt;#A URL that identifies an audiovisual asset such as a movie file#&amp;gt;;A">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://developer.apple.com/library/prerelease/ios/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/export_2x.png">
+<meta property="og:updated_time" content="2019-02-27T06:04:17.300Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AVFoundation编程指南1-使用 Assets">
+<meta name="twitter:description" content="AVFoundation Programming Guide##创建assert对象为了创建一个由URL标识的代表任何资源的assert对象，可以使用AVURLAssert，最简单的是从文件里创建一个assert对象： 12NSURL *url = &amp;lt;#A URL that identifies an audiovisual asset such as a movie file#&amp;gt;;A">
+<meta name="twitter:image" content="https://developer.apple.com/library/prerelease/ios/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/export_2x.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/27/AVFoundation编程指南1-使用-Assets/">
+
+
+
+
+
+  <title>AVFoundation编程指南1-使用 Assets | Chenjiang's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Chenjiang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/AVFoundation编程指南1-使用-Assets/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="chenjiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/5626978?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chenjiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">AVFoundation编程指南1-使用 Assets</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-27T14:03:42+08:00">
+                2019-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="AVFoundation-Programming-Guide"><a href="#AVFoundation-Programming-Guide" class="headerlink" title="AVFoundation Programming Guide"></a>AVFoundation Programming Guide</h1><p>##创建assert对象<br>为了创建一个由URL标识的代表任何资源的assert对象，可以使用AVURLAssert，最简单的是从文件里创建一个assert对象：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSURL *url = &lt;#A URL that identifies an audiovisual asset such as a movie file#&gt;;</span><br><span class="line">AVURLAsset *anAsset = [[AVURLAsset alloc] initWithURL:url options:nil];</span><br></pre></td></tr></table></figure>
+<p>###Asset 初始化的可选操作<br>AVURLAsset初始化方法的第二个参数使用一个dictionary，这个dictionary里的唯一一个key是 AVURLAssetPreferPreciseDurationAndTimingKey，它的value是一个boolean类型（用NSValue包装的对象），这个值表示asset是否提供一个精确的duration。<br>获取asset精确的duration需要很多处理时间，使用一个预估的duration效率比较高并且对播放来说足够。因此：<br>· 如果你想要播放asset，初始化方法传nil就行了，而不是一个dictionry，或者传一个以AVURLAssetPreferPreciseDurationAndTimingKeydictionary为key，值为NO的一个dictionary。<br>· 如果你想把asset加到一个composition中，你需要一个精确的访问权限，这时你可以传一个dictionary，这个dictionary的一组键值对为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">AVURLAssetPreferPreciseDurationAndTimingKey和YES。</span><br><span class="line">NSURL *url = &lt;#A URL that identifies an audiovisual asset such as a movie file#&gt;;</span><br><span class="line">NSDictionary *options = @&#123; AVURLAssetPreferPreciseDurationAndTimingKey : @YES &#125;;</span><br><span class="line">AVURLAsset *anAssetToUseInAComposition = [[AVURLAsset alloc] initWithURL:url options:options];</span><br></pre></td></tr></table></figure>
+<p>###访问用户的asset<br>为了访问 iPod library 和相册里asset，你需要获取asset的URL。<br>· 为了访问ipod Library，需要创建MPMediaQuery对象来找到你想要对象，然后通过MPMediaItemPropertyAssetURL获取它的URL。要想获取更多关于Media Library，查看Multimedia Programming Guide.<br>· 为了访问相册，可以使用ALAssetsLibrary.<br>下面的例子用来获取相册里面的第一个视频:<br>ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];</p>
+<pre><code>// Enumerate just the photos and videos group by using ALAssetsGroupSavedPhotos.
+[library enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos
+                       usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+
+                           // Within the group enumeration block, filter to enumerate just videos.
+                           [group setAssetsFilter:[ALAssetsFilter allVideos]];
+
+                           // For this example, we&apos;re only interested in the first item.
+                           [group enumerateAssetsAtIndexes:[NSIndexSet indexSetWithIndex:0]
+                                                   options:0
+                                                usingBlock:^(ALAsset *alAsset, NSUInteger index, BOOL *innerStop) {
+
+                                                    // The end of the enumeration is signaled by asset == nil.
+                                                    if (alAsset) {
+                                                        ALAssetRepresentation *representation = [alAsset defaultRepresentation];
+                                                        NSURL *url = [representation url];
+                                                        AVAsset *avAsset = [AVURLAsset URLAssetWithURL:url options:nil];
+                                                        // Do something interesting with the AV asset.
+                                                    }
+                                                }];
+                       }
+                     failureBlock: ^(NSError *error) {
+                         // Typically you should handle an error more gracefully than this.
+                         NSLog(@&quot;No groups&quot;);
+                     }];
+</code></pre><p>##准备使用Asset<br>初始化一个asset（或者track）并不是表示asset里面所有的信息都是马上可用的。它需要一些时间去计算，即使是durtation（比如没有摘要信息的mp3文件），你应该使用AVAsynchronousKeyValueLoading协议获取这些值，通过- loadValuesAsynchronouslyForKeys:completionHandler:在handler里面获取你要的值。<br>你可以用statusOfValueForKey:error:测试一个属性的value是否成功获取，当一个assert第一次被加载，大多数属性的值是AVKeyValueStatusUnknown状态，为了获取一个或多个属性的值，你要调用loadValuesAsynchronouslyForKeys:completionHandler:，在comletiton handler里面，你可以根据属性的状态做任何合适的处理。你要处理加载没有成功的情况，可能因为一些原因比如网络不可连接，又或者loading被取消。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">NSURL *url = &lt;#A URL that identifies an audiovisual asset such as a movie file#&gt;;</span><br><span class="line">AVURLAsset *anAsset = [[AVURLAsset alloc] initWithURL:url options:nil];</span><br><span class="line">NSArray *keys = @[@&quot;duration&quot;];</span><br><span class="line"> </span><br><span class="line">[asset loadValuesAsynchronouslyForKeys:keys completionHandler:^() &#123;</span><br><span class="line"> </span><br><span class="line">    NSError *error = nil;</span><br><span class="line">    AVKeyValueStatus tracksStatus = [asset statusOfValueForKey:@&quot;duration&quot; error:&amp;error];</span><br><span class="line">    switch (tracksStatus) &#123;</span><br><span class="line">        case AVKeyValueStatusLoaded:</span><br><span class="line">            [self updateUserInterfaceForDuration];</span><br><span class="line">            break;</span><br><span class="line">        case AVKeyValueStatusFailed:</span><br><span class="line">            [self reportError:error forAsset:asset];</span><br><span class="line">            break;</span><br><span class="line">        case AVKeyValueStatusCancelled:</span><br><span class="line">            // Do whatever is appropriate for cancelation.</span><br><span class="line">            break;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<p>如果你想要播放asset，你应该加载他的tracks属性。</p>
+<p>##从video中获取静态图片<br>从asset中获取静态图片（比如说缩略图），你可以用AVAssetImageGenerator对象。可以用asset初始化一个AVAssetImageGenerator对象.即使asset在初始化的时候没有可见的track也能成功，所以你应该检测asset是否有track，使用tracksWithMediaCharacteristic:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">AVAsset anAsset = &lt;#Get an asset#&gt;;</span><br><span class="line">if ([[anAsset tracksWithMediaType:AVMediaTypeVideo] count] &gt; 0) &#123;</span><br><span class="line">    AVAssetImageGenerator *imageGenerator =</span><br><span class="line">        [AVAssetImageGenerator assetImageGeneratorWithAsset:anAsset];</span><br><span class="line">    // Implementation continues...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>你还可以设置imagegenerator的其他属性，比如，你可以指定生成图片的最大的分辨率，你可以生成指定时间的一张图片，或者一系列图片。你必须一直持有generator的引用，直到生成所有的图片。</p>
+<p>###生成单个图片<br>你可以使用copyCGImageAtTime:actualTime:error:生成一张指定时间点的图片。AVFoundation不一定能精确的生成一张你所指定时间的图片，所以你可以在第二个参数传一个CMTime的指针，用来获取所生成图片的精确时间。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">AVAsset *myAsset = &lt;#An asset#&gt;];</span><br><span class="line">AVAssetImageGenerator *imageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:myAsset];</span><br><span class="line"> </span><br><span class="line">Float64 durationSeconds = CMTimeGetSeconds([myAsset duration]);</span><br><span class="line">CMTime midpoint = CMTimeMakeWithSeconds(durationSeconds/2.0, 600);</span><br><span class="line">NSError *error;</span><br><span class="line">CMTime actualTime;</span><br><span class="line"> </span><br><span class="line">CGImageRef halfWayImage = [imageGenerator copyCGImageAtTime:midpoint actualTime:&amp;actualTime error:&amp;error];</span><br><span class="line"> </span><br><span class="line">if (halfWayImage != NULL) &#123;</span><br><span class="line"> </span><br><span class="line">    NSString *actualTimeString = (NSString *)CMTimeCopyDescription(NULL, actualTime);</span><br><span class="line">    NSString *requestedTimeString = (NSString *)CMTimeCopyDescription(NULL, midpoint);</span><br><span class="line">    NSLog(@&quot;Got halfWayImage: Asked for %@, got %@&quot;, requestedTimeString, actualTimeString);</span><br><span class="line"> </span><br><span class="line">    // Do something interesting with the image.</span><br><span class="line">    CGImageRelease(halfWayImage);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>###生成一系列图片<br>为了生成一系列图片，你可以调用generateCGImagesAsynchronouslyForTimes:completionHandler:，第一个参数是一个包含NSValue类型的数组，数组里每一个对象都是CMTime结构体，表示你想要生成的图片在视频中的时间点，第二个参数是一个block，每生成一张图片都会回调这个block，这个block提供一个result的参数告诉你图片是否成功生成或者图片生成操作是否取消。</p>
+<p>在你的block实现中，需要检查result，判断image是否成功生成，另外，确保你持有image generator直到生成图片的操作结束。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">AVAsset *myAsset = &lt;#An asset#&gt;];</span><br><span class="line">// Assume: @property (strong) AVAssetImageGenerator *imageGenerator;</span><br><span class="line">self.imageGenerator = [AVAssetImageGenerator assetImageGeneratorWithAsset:myAsset];</span><br><span class="line"> </span><br><span class="line">Float64 durationSeconds = CMTimeGetSeconds([myAsset duration]);</span><br><span class="line">CMTime firstThird = CMTimeMakeWithSeconds(durationSeconds/3.0, 600);</span><br><span class="line">CMTime secondThird = CMTimeMakeWithSeconds(durationSeconds*2.0/3.0, 600);</span><br><span class="line">CMTime end = CMTimeMakeWithSeconds(durationSeconds, 600);</span><br><span class="line">NSArray *times = @[NSValue valueWithCMTime:kCMTimeZero],</span><br><span class="line">                  [NSValue valueWithCMTime:firstThird], [NSValue valueWithCMTime:secondThird],</span><br><span class="line">                  [NSValue valueWithCMTime:end]];</span><br><span class="line"> </span><br><span class="line">[imageGenerator generateCGImagesAsynchronouslyForTimes:times</span><br><span class="line">                completionHandler:^(CMTime requestedTime, CGImageRef image, CMTime actualTime,</span><br><span class="line">                                    AVAssetImageGeneratorResult result, NSError *error) &#123;</span><br><span class="line"> </span><br><span class="line">                NSString *requestedTimeString = (NSString *)</span><br><span class="line">                    CFBridgingRelease(CMTimeCopyDescription(NULL, requestedTime));</span><br><span class="line">                NSString *actualTimeString = (NSString *)</span><br><span class="line">                    CFBridgingRelease(CMTimeCopyDescription(NULL, actualTime));</span><br><span class="line">                NSLog(@&quot;Requested: %@; actual %@&quot;, requestedTimeString, actualTimeString);</span><br><span class="line"> </span><br><span class="line">                if (result == AVAssetImageGeneratorSucceeded) &#123;</span><br><span class="line">                    // Do something interesting with the image.</span><br><span class="line">                &#125;</span><br><span class="line"> </span><br><span class="line">                if (result == AVAssetImageGeneratorFailed) &#123;</span><br><span class="line">                    NSLog(@&quot;Failed with error: %@&quot;, [error localizedDescription]);</span><br><span class="line">                &#125;</span><br><span class="line">                if (result == AVAssetImageGeneratorCancelled) &#123;</span><br><span class="line">                    NSLog(@&quot;Canceled&quot;);</span><br><span class="line">                &#125;</span><br><span class="line">  &#125;];</span><br></pre></td></tr></table></figure>
+<p>你也可以取消生成图片的操作，通过想generator发送cancelAllCGImageGeneration的消息。</p>
+<p>##裁剪视频和对视频转码<br>你可以对视频进行转码、裁剪，通过使用AVAssetExportSession对象。这个流程如下图所示，<br><img src="https://developer.apple.com/library/prerelease/ios/documentation/AudioVideo/Conceptual/AVFoundationPG/Art/export_2x.png" alt><br>一个export session是一个控制对象，可以异步的生成一个asset。可以用你需要生成的asset和presetName来初始化一个session，presetName指明你要生成的asset的属性。接下来你可以配置export session，比如可以指定输出的URL和文件类型，以及其他的设置，比如metadata等等。<br>你可以先检测设置的preset是否可用，通过使用exportPresetsCompatibleWithAsset:方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">AVAsset *anAsset = &lt;#Get an asset#&gt;;</span><br><span class="line">NSArray *compatiblePresets = [AVAssetExportSession exportPresetsCompatibleWithAsset:anAsset];</span><br><span class="line">if ([compatiblePresets containsObject:AVAssetExportPresetLowQuality]) &#123;</span><br><span class="line">    AVAssetExportSession *exportSession = [[AVAssetExportSession alloc]</span><br><span class="line">        initWithAsset:anAsset presetName:AVAssetExportPresetLowQuality];</span><br><span class="line">    // Implementation continues.</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>你可以配置session的输出的url（这个url必须是文件url），AVAssetExportSession可以推断通过url的扩展名出输出文件的类型。当然，你可以直接设置文件类型，使用outputFileType。你还可以指定其他属性，比如time range，输出文件的长度等等，下面是列子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">exportSession.outputURL = &lt;#A file URL#&gt;;</span><br><span class="line">    exportSession.outputFileType = AVFileTypeQuickTimeMovie;</span><br><span class="line"> </span><br><span class="line">    CMTime start = CMTimeMakeWithSeconds(1.0, 600);</span><br><span class="line">    CMTime duration = CMTimeMakeWithSeconds(3.0, 600);</span><br><span class="line">    CMTimeRange range = CMTimeRangeMake(start, duration);</span><br><span class="line">    exportSession.timeRange = range;</span><br></pre></td></tr></table></figure>
+<p>生成一个新的asset，可以调用exportAsynchronouslyWithCompletionHandler:，当生成操作结束后会回调block，在这个block中你需要通过检查session的status来判断是否成功，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[exportSession exportAsynchronouslyWithCompletionHandler:^&#123;</span><br><span class="line"> </span><br><span class="line">      switch ([exportSession status]) &#123;</span><br><span class="line">          case AVAssetExportSessionStatusFailed:</span><br><span class="line">              NSLog(@&quot;Export failed: %@&quot;, [[exportSession error] localizedDescription]);</span><br><span class="line">              break;</span><br><span class="line">          case AVAssetExportSessionStatusCancelled:</span><br><span class="line">              NSLog(@&quot;Export canceled&quot;);</span><br><span class="line">              break;</span><br><span class="line">          default:</span><br><span class="line">              break;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;];</span><br></pre></td></tr></table></figure>
+<p>你可以取消这个生成操作，通过给session发送 cancelExport 消息。<br>如果导出的文件存在，或者导出的url在沙盒之外，这个导出操作会失败。还有两种情况也可能导致失败：<br>· 来了一个电话<br>· 你的程序在后台运行并且其他的应用开始播放。<br>这种情况下，你应该通知用户export失败，并且重新export。</p>
+<p>#参考：<br><a href="https://developer.apple.com/library/prerelease/ios/documentation/AudioVideo/Conceptual/AVFoundationPG/Articles/01_UsingAssets.html" target="_blank" rel="noopener">https://developer.apple.com/library/prerelease/ios/documentation/AudioVideo/Conceptual/AVFoundationPG/Articles/01_UsingAssets.html</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/27/Swift闭包3-逃逸闭包/" rel="next" title="Swift闭包3-逃逸闭包">
+                <i class="fa fa-chevron-left"></i> Swift闭包3-逃逸闭包
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/27/AVFoundation编程指南2-用AVPlayer播放视频/" rel="prev" title="AVFoundation编程指南2-用AVPlayer播放视频">
+                AVFoundation编程指南2-用AVPlayer播放视频 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://avatars1.githubusercontent.com/u/5626978?s=460&v=4" alt="chenjiang">
+            
+              <p class="site-author-name" itemprop="name">chenjiang</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#AVFoundation-Programming-Guide"><span class="nav-number">1.</span> <span class="nav-text">AVFoundation Programming Guide</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">chenjiang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

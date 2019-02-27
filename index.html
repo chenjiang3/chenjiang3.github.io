@@ -80,12 +80,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="chenjiang">
+<meta property="og:title" content="Chenjiang&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="chenjiang">
+<meta property="og:site_name" content="Chenjiang&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="chenjiang">
+<meta name="twitter:title" content="Chenjiang&#39;s Blog">
 
 
 
@@ -121,7 +121,7 @@
 
 
 
-  <title>chenjiang</title>
+  <title>Chenjiang's Blog</title>
   
 
 
@@ -152,7 +152,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">chenjiang</span>
+        <span class="site-title">Chenjiang's Blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -259,6 +259,642 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/AVFoundation编程指南2-用AVPlayer播放视频/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="chenjiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/5626978?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chenjiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/27/AVFoundation编程指南2-用AVPlayer播放视频/" itemprop="url">AVFoundation编程指南2-用AVPlayer播放视频</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-27T14:05:20+08:00">
+                2019-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          控制assets的播放，你可以使用AVPlayer对象。在播放的过程中，你可以使用AVPlayerItem对象来管理asset的呈现，AVPlayerItemTrack来管理track。要显示视频，需要使用AVPlayerLayer。
+#播放Assets一个播放器就是控制asset播放的对象，比如开
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/27/AVFoundation编程指南2-用AVPlayer播放视频/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/AVFoundation编程指南1-使用-Assets/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="chenjiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/5626978?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chenjiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/27/AVFoundation编程指南1-使用-Assets/" itemprop="url">AVFoundation编程指南1-使用 Assets</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-27T14:03:42+08:00">
+                2019-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          AVFoundation Programming Guide##创建assert对象为了创建一个由URL标识的代表任何资源的assert对象，可以使用AVURLAssert，最简单的是从文件里创建一个assert对象：
+12NSURL *url = &lt;#A URL that identifie
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/27/AVFoundation编程指南1-使用-Assets/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/Swift闭包3-逃逸闭包/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="chenjiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/5626978?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chenjiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/27/Swift闭包3-逃逸闭包/" itemprop="url">Swift闭包3-逃逸闭包</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-27T13:52:16+08:00">
+                2019-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          引言&emsp;&emsp;本篇将介绍swift中一种特殊的闭包-逃逸闭包（escape closure）。
+逃逸闭包&emsp;&emsp;当一个传入函数的闭包在函数执行结束之后才会被调用，这样的闭包就叫做逃逸闭包。如果一个函数的参数有一个逃逸闭包，可以在参数前加@escaping关键字来修饰。
+
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/27/Swift闭包3-逃逸闭包/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/Swift闭包2-尾闭包/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="chenjiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/5626978?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chenjiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/27/Swift闭包2-尾闭包/" itemprop="url">Swift闭包2-尾闭包</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-27T13:51:18+08:00">
+                2019-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          引言&emsp;&emsp;上一片文章讲解了swift中闭包的基本概念，以及基本的语法，这篇文章主要讲解一下swift中尾闭包。
+什么是尾闭包&emsp;&emsp;假设有这样一个函数：这个函数的最后一个参数是一个闭包，并且，这个闭包表达式很长。如果按照正常的方式来调用这个函数的话，需要在参数里指明
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/27/Swift闭包2-尾闭包/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/Swift闭包1-基本概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="chenjiang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/5626978?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chenjiang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/27/Swift闭包1-基本概念/" itemprop="url">Swift闭包1-基本概念</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-27T13:50:40+08:00">
+                2019-02-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          引言&emsp;&emsp;这篇文章开始主要讲解Swift中闭包（Closures）的一些知识点。本文是这个系列的第一篇。
+闭包的基本概念&emsp;&emsp;闭包的就是匿名函数，别的语言也有类似的概念，在Objective-c中就是block，在c++中就是lambdas表达式。闭包可以获取闭包
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/27/Swift闭包1-基本概念/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/27/core-image-入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -268,7 +904,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="chenjiang">
+      <meta itemprop="name" content="Chenjiang's Blog">
     </span>
 
     
@@ -330,71 +966,16 @@
       
         
           
-            <p>core image是一个强大的图像处理框架，使用core image可以方便的实现滤镜，比如可以修改图像的形变，色彩和曝光。它使用GPU（或者是CPU）来处理图像数据，所以特别快，可以实时处理视频的每一帧。</p>
-<p>core image的多个滤镜可以合在一起，同一时间处理视频帧或者图像。当多个滤镜合在一起使用的时候效率更高，因为合在一起的时候，只需要创建一个合成的滤镜来处理图像，如果分开的话，每一个滤镜都要创建。</p>
-<p>每一个滤镜都自己的参数，这些参数可以在代码中获取。也可以查询系统可以提供的各种滤镜。iOS平台上可使用的滤镜比Mac上的要少，是Mac上的一个子集。</p>
-<p>在这篇文章中，我会手把手的教你使用core image。会教你使用各种滤镜，你会发现对图片实现一个很cool的效果是很简单的。</p>
-<p>#core image概述<br>开始之前，先简单介绍一下core image framework里面重要的几个类。<br><br>· CIContext：core image的所有处理都是由CIContext来完成的，这有点类似于Core Graphics和openGL的context。<br><br>· CIImage: 这个类持有图片的数据，可以用UIImage来创建，也可以使用图片文件或者像素数据来创建。<br><br>· CIFliter：这个类表示一个滤镜，它有许多属性，在内部由一个dictionary来维护。滤镜的种类有很多，比如是图片形变的滤镜，可以改变图片色彩的滤镜，可以裁剪图片的滤镜，等等<br></p>
-<p>接下来在你的工程中会使用到这些类。</p>
-<p>#开始<br>打开Xcode，创建一个新的single view application工程，工程名为CoreImageFun，选择Device为iPhone。</p>
-<p>创建好工程的第一件事就是把Core Image framework加入到工程中，在Mac平台，coreimage framework是QuartzCore framework的一部分，在iOS平台上它是独立的framework。怎么给工程添加framework，这里就不细说了，不会的请查看相关文档。</p>
-<p>接下来，下载项目中会用到的<a href="https://raw.githubusercontent.com/chenjiang3/blog-resources/master/resource/CIResources.zip" target="_blank" rel="noopener">资源</a>,资源下下来之后加入到你的工程中。</p>
-<p>接下来，在viewdidload里面新建一个UIImageView，代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- (void)viewDidLoad &#123;</span><br><span class="line">    [super viewDidLoad];</span><br><span class="line">    // Do any additional setup after loading the view, typically from a nib.</span><br><span class="line">    self.view.backgroundColor = [UIColor whiteColor];</span><br><span class="line">    </span><br><span class="line">    _imageView = [[UIImageView alloc] init];</span><br><span class="line">    [self.view addSubview:_imageView];</span><br><span class="line">    _imageView.bounds = CGRectMake(0, 0, self.view.width, 300);</span><br><span class="line">    _imageView.centerX = self.view.width / 2.0f;</span><br><span class="line">    _imageView.top = 0;</span><br><span class="line">    //.......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注：项目用到的定位</p>
-<p>#基本的滤镜效果<br>接下来实现一个很简单的滤镜效果，显示在imageview上。<br><br>每次实现滤镜的效果，基本上都会包含一下四个步骤：</p>
-<p>#####1、创建CIImage对象：CIImage有很多初始化方法，比如， imageWithURL:, imageWithData:, imageWithCVPixelBuffer:, 以及 imageWithBitmapData:bytesPerRow:size:format:colorSpace:，大多数情况下，使用imageWithURL: 就可以了。<br></p>
-<p>#####2、创建CIContext对象：一个CIContext对象可以使用CPU，也可以使用GPU。CIContext可以重用，所以，不需要重复的创建CIContext对象。<br></p>
-<p>#####3、创建CIFilter对象：当创建一个CIFliter对象的时候，可以根据你需要实现的滤镜效果给它设置一系列的属性。<br></p>
-<p>#####4、获取filter的输出对象：CIFilter会根据你设置的属性输出一个符合你预期效果的一个图片，这个图片是CIImage类型的对象，可以用CIContext转换成UIImage.<br></p>
-<p>请看代码是如何实现的。在ViewController.m文件的viewDidLoad:方法里面添加以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 1</span><br><span class="line">NSString *filePath =</span><br><span class="line">  [[NSBundle mainBundle] pathForResource:@&quot;image&quot; ofType:@&quot;png&quot;];</span><br><span class="line">NSURL *fileNameAndPath = [NSURL fileURLWithPath:filePath];</span><br><span class="line"> </span><br><span class="line">// 2</span><br><span class="line">CIImage *beginImage =</span><br><span class="line">  [CIImage imageWithContentsOfURL:fileNameAndPath];</span><br><span class="line"> </span><br><span class="line">// 3</span><br><span class="line">CIFilter *filter = [CIFilter filterWithName:@&quot;CISepiaTone&quot;</span><br><span class="line">                              keysAndValues: kCIInputImageKey, beginImage,</span><br><span class="line">                    @&quot;inputIntensity&quot;, @0.8, nil];</span><br><span class="line">CIImage *outputImage = [filter outputImage];</span><br><span class="line"> </span><br><span class="line">// 4</span><br><span class="line">UIImage *newImage = [UIImage imageWithCIImage:outputImage];</span><br><span class="line">self.imageView.image = newImage;</span><br></pre></td></tr></table></figure>
-<p>上面代码的意思是：<br><br>1、前两行代码创建一个NSURL对象，用来表示image的路径。<br><br>2、接下来用imageWithContentsOfURL方法创建一个CIImage对象。<br><br>3、创建一个CIFilter对象，这个对象的构造方法里面传了两个参数，第一个参数是滤镜的名字，第二个参数是一个dictionary，表示滤镜的一些参数。</p>
-<p>CISepiaTone只需要两个参数，KCIInputImageKey和@”inputIntensity”，KCIInputImageKey表示一个图片。inputIntensity是一个float类型的值，用nsnumber包装，它的范围是0-1，这里设置的是0.8。大多数滤镜都有默认值，如果没有手动设置的话就用默认值。除了CIImage，它没有默认值。获取使用滤镜之后的图片很简单，只需要获取outputImage属性就行了。<br><br><br>4、一旦你获取了output CIImage，就可以把它转换成一个UIImage。在iOS6下可以使用UIImage的方法 +imageWithCIImage: 来完成这个步骤，这个方法使用一个CIImage对象来创建一个UIImage。一旦你创建了一个UIImage对象，就可以把它显示在image view 上了。<br></p>
-<p>编译运行，你会看到一个经过滤镜处理后的图片，恭喜你，现在你已经学会使用CIImage和CIFilter了！！！！，效果如下：<br><br><img src="http://cdn3.raywenderlich.com/wp-content/uploads/2012/09/AddingButton.png" alt></p>
-<p>#使用Context<br>在继续教程之前，你需要知道一个小小的优化。</p>
-<p>之前提到，CIContext是用来处理CIFliter的，但是在上面的例子中却没有用到CIContext。这是因为上面的例子直接使用了UIImage的imageWithCIImage方法，在imageWithCIImage内部已经把所有的工作都做了，它在内部创建了一个CIContext对象，然后用这个对象获取了output Image。</p>
-<p>这样做有一个缺点-每次都会创建一个CIContext对象，其实CIContext对象是可以重复使用的。如果使用一个slide控件更新filter的值，如果用上面的代码的话，每次都会创建一个CIContext对象，这样的话效率非常低。</p>
-<p>接下来对上面的代码进行改进，删除上面的代码，用下面的代码替换。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">CIImage *beginImage =</span><br><span class="line">  [CIImage imageWithContentsOfURL:fileNameAndPath];</span><br><span class="line"> </span><br><span class="line">// 1</span><br><span class="line">CIContext *context = [CIContext contextWithOptions:nil];</span><br><span class="line"> </span><br><span class="line">CIFilter *filter = [CIFilter filterWithName:@&quot;CISepiaTone&quot;</span><br><span class="line">                              keysAndValues: kCIInputImageKey, beginImage,</span><br><span class="line">                    @&quot;inputIntensity&quot;, @0.8, nil];</span><br><span class="line">CIImage *outputImage = [filter outputImage];</span><br><span class="line"> </span><br><span class="line">// 2</span><br><span class="line">CGImageRef cgimg =</span><br><span class="line">  [context createCGImage:outputImage fromRect:[outputImage extent]];</span><br><span class="line"> </span><br><span class="line">// 3</span><br><span class="line">UIImage *newImage = [UIImage imageWithCGImage:cgimg];</span><br><span class="line">self.imageView.image = newImage;</span><br><span class="line"> </span><br><span class="line">// 4</span><br><span class="line">CGImageRelease(cgimg);</span><br></pre></td></tr></table></figure>
-<p>下面解释下上面的代码：</p>
-<p>1、这里创建了一个CIContext对象，它的构造方法里面传了一个dictionary，这个dictionary可以执行颜色以及是否使用cpu或者gpu，在这里，我们使用默认的属性就行了，所以传一个nil即可。</p>
-<p>2、使用context对象来创建CGImage，调用createCGImage:fromRect:即可，这样就创建了一个CGImageRef。</p>
-<p>3、接下来使用UIImage +imageWithCGImage把上一步创建的CGImage转换为UIImage。</p>
-<p>4、最后，释放CGImageRef，CGImage是C API的，需要手动管理内存，即使是在ARC模式下。</p>
-<p>编译运行，确保结果和之前的一样。</p>
-<p>在这里例子中，单独创建一个CIContext对象和之前的方法差别不是很大，但是，接下来的例子里，你会发现差别会很大。</p>
-<p>#改变filter的值<br>接下来我们添加一个slide控件，用这个控件实时改变filter的值。</p>
-<p>界面如下：<br><img src="http://cdn3.raywenderlich.com/wp-content/uploads/2012/09/AddingButton.png" alt><br>创建的代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">1、创建slider控件</span><br><span class="line">_amountSlider = [[UISlider alloc] init];</span><br><span class="line">    [self.view addSubview:_amountSlider];</span><br><span class="line">    _amountSlider.bounds = CGRectMake(0, 0, self.view.width - 40, 44);</span><br><span class="line">    _amountSlider.top = _imageView.bottom + 20.0f;</span><br><span class="line">    _amountSlider.centerX = self.view.width / 2.0f;</span><br><span class="line">    [_amountSlider addTarget:self action:@selector(amountSliderValueChanged:) forControlEvents:UIControlEventValueChanged];</span><br><span class="line">2、回调方法</span><br><span class="line">- (void)amountSliderValueChanged:(UISlider *)slider &#123;</span><br><span class="line">    NSLog(@&quot;amountSliderValueChanged...&quot;);</span><br><span class="line">    float slideValue = slider.value;</span><br><span class="line">    [filter setValue:@(slideValue) forKey:@&quot;inputIntensity&quot;];</span><br><span class="line">    CIImage *outputImage = [filter outputImage];</span><br><span class="line">    CGImageRef cgimg = [context createCGImage:outputImage fromRect:[outputImage extent]];</span><br><span class="line">    UIImage *newImage = [UIImage imageWithCGImage:cgimg];</span><br><span class="line">    _imageView.image = newImage;</span><br><span class="line">    CGImageRelease(cgimg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>每一次改变slider的值，你需要重新对图片进行滤镜的效果。但是，你不需要每次都做全部的事情，这样会效率很低下。你只需要改变一点点东西，所以一些需要改为全局变量。</p>
-<p>最重要的事情就是重用CIContext对象，如果每次都去创建，效率太低了。另外就是把cifilter和初始的ciimage对象放到全局变量中，这些对象是可以重用的。</p>
-<p>所以需要把这三个变量当作viewcontroller的成员变量，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@implementation ViewController &#123;</span><br><span class="line">    CIContext *context;</span><br><span class="line">    CIFilter *filter;</span><br><span class="line">    CIImage *beginImage;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>viewdidload里面的初始化方法也要相应的改变。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">beginImage = [CIImage imageWithContentsOfURL:fileNameAndPath];</span><br><span class="line">context = [CIContext contextWithOptions:nil];</span><br><span class="line"> </span><br><span class="line">filter = [CIFilter filterWithName:@&quot;CISepiaTone&quot; </span><br><span class="line">  keysAndValues:kCIInputImageKey, beginImage, @&quot;inputIntensity&quot;, </span><br><span class="line">  @0.8, nil];</span><br></pre></td></tr></table></figure>
-<p>现在需要实现changevalue的方法，在这个方法里需要改变CIFilter的dictionary里的@”inputIntensity”对应的值，一旦改变了这个值，接下来就需要执行以下三步:</p>
-<p>1、获取CIFilter的output image。</p>
-<p>2、把ciimage转为CGImageRef。</p>
-<p>3、把CGImageRef转为UIImage，并且显示在image view上。</p>
-<p>所以在amountSliderValueChanged里的代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- (void)amountSliderValueChanged:(UISlider *)slider &#123;</span><br><span class="line">    NSLog(@&quot;amountSliderValueChanged...&quot;);</span><br><span class="line">    float slideValue = slider.value;</span><br><span class="line">    [filter setValue:@(slideValue) forKey:@&quot;inputIntensity&quot;];</span><br><span class="line">    CIImage *outputImage = [filter outputImage];</span><br><span class="line">    CGImageRef cgimg = [context createCGImage:outputImage fromRect:[outputImage extent]];</span><br><span class="line">    UIImage *newImage = [UIImage imageWithCGImage:cgimg];</span><br><span class="line">    _imageView.image = newImage;</span><br><span class="line">    CGImageRelease(cgimg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这段代码从slider获取float value，slide的value从0-1，刚好和CIFilter里的值的范围一样，这样很方便，可以直接拿来用。</p>
-<p>编译运行，你移动slide，你会发现不同的效果，效果如下：</p>
-<p><img src="http://cdn3.raywenderlich.com/wp-content/uploads/2012/09/AddingButton.png" alt></p>
-<p>#从相册里获取照片<br>现在可以动态的改变filter的value，这看起来很有意思。但是仅仅是对这个固定的图片进行滤镜很没劲，下面使用UIImagePickerController获取相册的图片，并惊醒滤镜处理。</p>
-<p>创建一个按钮，用来打开相册。界面如下：<br><img src="http://cdn3.raywenderlich.com/wp-content/uploads/2012/09/AddingButton.png" alt><br>实现这个按钮的点击方法loadPhoto，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- (IBAction)loadPhoto:(id)sender &#123;</span><br><span class="line">    UIImagePickerController *pickerC = </span><br><span class="line">      [[UIImagePickerController alloc] init];</span><br><span class="line">    pickerC.delegate = self;</span><br><span class="line">    [self presentViewController:pickerC animated:YES completion:nil];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>第一行实例化一个UIImagePickerController，并把self设为它的delegate。</p>
-<p>这里会有一个警告，你需要实现UIImagePickerControllerDelegate 和UINaviationControllerDelegate协议。代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@interface ViewController () &lt;UIImagePickerControllerDelegate, UINavigationBarDelegate&gt;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">- (void)imagePickerController:(UIImagePickerController *)picker </span><br><span class="line">  didFinishPickingMediaWithInfo:(NSDictionary *)info &#123;</span><br><span class="line">    [self dismissViewControllerAnimated:YES completion:nil];</span><br><span class="line">    NSLog(@&quot;%@&quot;, info);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">- (void)imagePickerControllerDidCancel:</span><br><span class="line">  (UIImagePickerController *)picker &#123;</span><br><span class="line">    [self dismissViewControllerAnimated:YES completion:nil];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在这两个方法中，都是dimiss UIPickerController。</p>
-<p>第一个方法还没有完全实现，下面是完整的实现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- (void)imagePickerController:(UIImagePickerController *)picker</span><br><span class="line">  didFinishPickingMediaWithInfo:(NSDictionary *)info &#123;</span><br><span class="line">    [self dismissViewControllerAnimated:YES completion:nil];</span><br><span class="line">    UIImage *gotImage =</span><br><span class="line">      [info objectForKey:UIImagePickerControllerOriginalImage];</span><br><span class="line">    beginImage = [CIImage imageWithCGImage:gotImage.CGImage];</span><br><span class="line">    [filter setValue:beginImage forKey:kCIInputImageKey];</span><br><span class="line">    [self amountSliderValueChanged:self.amountSlider];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>完整的例子在<a href="https://raw.githubusercontent.com/chenjiang3/blog-resources/master/resource/CoreImageFun.zip" target="_blank" rel="noopener">这里</a></p>
-<p>参考文献：<a href="http://www.raywenderlich.com/22167/beginning-core-image-in-ios-6" target="_blank" rel="noopener">http://www.raywenderlich.com/22167/beginning-core-image-in-ios-6</a></p>
-
-          
+          core image是一个强大的图像处理框架，使用core image可以方便的实现滤镜，比如可以修改图像的形变，色彩和曝光。它使用GPU（或者是CPU）来处理图像数据，所以特别快，可以实时处理视频的每一帧。
+core image的多个滤镜可以合在一起，同一时间处理视频帧或者图像。当多个滤镜合在一起
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/27/core-image-入门/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -450,7 +1031,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="chenjiang">
+      <meta itemprop="name" content="Chenjiang's Blog">
     </span>
 
     
@@ -512,37 +1093,16 @@
       
         
           
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在Objective-C中，block是一个很常见的东西，说白了就是个匿名函数，网上有很多关于block如何使用的文章，讲的都非常精彩，这里主要探讨下block的实现原理。关于如何使用block，请参考网上的教程。</p>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>先来新建一个控制台工程，main.m里的代码如下，并思考下最后的输出结果是什么：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> blockFunc1() &#123;</span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">void</span> (^block)(<span class="keyword">void</span>) = ^() &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"num = %d\n"</span>, num);</span><br><span class="line">    &#125;;</span><br><span class="line">    num = <span class="number">200</span>;</span><br><span class="line">    block();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> blockFunc2() &#123;</span><br><span class="line">    __block <span class="keyword">int</span> num = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">void</span> (^block)(<span class="keyword">void</span>) = ^() &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"num = %d\n"</span>, num);</span><br><span class="line">    &#125;;</span><br><span class="line">    num = <span class="number">200</span>;</span><br><span class="line">    block();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> num = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">void</span> blockFunc3() &#123;</span><br><span class="line">    <span class="keyword">void</span> (^block)(<span class="keyword">void</span>) = ^() &#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"num = %d\n"</span>, num);</span><br><span class="line">    &#125;;</span><br><span class="line">    num = <span class="number">200</span>;</span><br><span class="line">    block();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> blockFunc4()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> num = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">void</span> (^block)(<span class="keyword">void</span>) = ^&#123;</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"num = %d"</span>, num);</span><br><span class="line">    &#125;;</span><br><span class="line">    num = <span class="number">200</span>;</span><br><span class="line">    block();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> * argv[]) &#123;</span><br><span class="line">    <span class="keyword">@autoreleasepool</span> &#123;</span><br><span class="line">        </span><br><span class="line">        ^&#123; printf(<span class="string">"Hello, World!\n"</span>); &#125; ();</span><br><span class="line">        </span><br><span class="line">        blockFunc1();</span><br><span class="line">        blockFunc2();</span><br><span class="line">        </span><br><span class="line">        blockFunc3();</span><br><span class="line">        blockFunc4();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>打印结果是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Hello, World!</span><br><span class="line">2018-03-21 15:50:01.996591+0800 BlockDemo[34825:4848536] num = 100</span><br><span class="line">2018-03-21 15:50:01.997009+0800 BlockDemo[34825:4848536] num = 200</span><br><span class="line">2018-03-21 15:50:01.997025+0800 BlockDemo[34825:4848536] num = 200</span><br><span class="line">2018-03-21 15:50:01.997037+0800 BlockDemo[34825:4848536] num = 200</span><br></pre></td></tr></table></figure></p>
-<p>聪明的读者应该早就知道这个结果，?，先简单解释一下:<br>1、<code>^{ printf(&quot;Hello, World!\n&quot;); } ();</code><br>这个没啥好说的，肯定就打印“Hello, World!”了。</p>
-<p>2、<code>blockFunc1</code>里面,<code>num</code>是以值传递的方式被block获取，所以尽管后面更改了<code>num</code>的值，但是在block里面还是保持保持原来的值。</p>
-<p>2、<code>blockFunc2</code>里面，num由<code>__block</code>修饰，<code>num</code>在block变成了外部的一个引用（后面会通过源码解释），所以在block外部改变<code>num</code>的值时，block里面的<code>num</code>也随着改变。</p>
-<p>3、<code>blockFunc3</code>里面，block引用的是一个全局的num，所以，num改变的时候也会改变block内部num的值。</p>
-<p>4、<code>blockFunc3</code>里面，block引用的是一个static的num，所以，num改变也会改变block内部的num的值。</p>
-<h2 id="源码分析"><a href="#源码分析" class="headerlink" title="源码分析"></a>源码分析</h2><p>也许大家看到上面的解释还是不知道为啥会这样，所以接下，我通过源码来分析下其中的缘由，我们先把这段先转换成c++文件，cd到main.m所在的目录，并执行这条命令<code>clang -rewrite-objc main.m</code>，通过这条命令可以把main.m文件转换成cpp文件，里面可以看到block的结构。我们打开这份文件，这个文件比较长，直接拉到最后。可以看到在文件的最后是main函数的入口，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    /* @autoreleasepool */ &#123; __AtAutoreleasePool __autoreleasepool; </span><br><span class="line"></span><br><span class="line">        ((void (*)())&amp;__main_block_impl_0((void *)__main_block_func_0, &amp;__main_block_desc_0_DATA)) ();</span><br><span class="line"></span><br><span class="line">        blockFunc1();</span><br><span class="line">        blockFunc2();</span><br><span class="line"></span><br><span class="line">        blockFunc3();</span><br><span class="line">        blockFunc4();</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>先看第一行代码，构造了一个<strong>main_block_impl_0对象，</strong>main_block_impl_0是一个结构体。相关代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">struct __block_impl &#123;</span><br><span class="line">  void *isa;</span><br><span class="line">  int Flags;</span><br><span class="line">  int Reserved;</span><br><span class="line">  void *FuncPtr;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">struct __main_block_impl_0 &#123;</span><br><span class="line">  struct __block_impl impl;</span><br><span class="line">  struct __main_block_desc_0* Desc;</span><br><span class="line">  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int flags=0) &#123;</span><br><span class="line">    impl.isa = &amp;_NSConcreteStackBlock;</span><br><span class="line">    impl.Flags = flags;</span><br><span class="line">    impl.FuncPtr = fp;</span><br><span class="line">    Desc = desc;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>从代码可知，最后block会转化成一个<strong>block_impl对象，而block执行的代码会转化成一个静态函数，</strong>block_impl里面的FuncPtr会指向这个静态函数。在这里<code>printf(&quot;Hello, World!\n&quot;);</code>这个block转换后的静态函数如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">static void __main_block_func_0(struct __main_block_impl_0 *__cself) &#123;</span><br><span class="line"> printf(&quot;Hello, World!\n&quot;); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>所以整个过程是这样的：<br>1、先构造一个<code>__main_block_impl_0</code>对象，构造的时候把<code>__main_block_func_0</code>传进去，当然还有别的参数，这里先不考虑。</p>
-<p>2、在<code>__main_block_impl_0</code>的构造方法中，再把<code>__main_block_func_0</code>赋给<code>__block_impl</code>的FuncPtr。</p>
-<p>3、调用FuncPtr。</p>
-<p>所以，从上面可以看出，block实际上是转化为了一个<code>__block_impl</code>对象，这个对象有isa指针，用来表示block的类型，上面的block的isa指向&amp;_NSConcreteStackBlock。同时block对象还有一个FuncPtr指针，用来指向block执行的方法（转换后的静态函数）。</p>
-<p>再来看看blockFunc1相关的内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">struct __blockFunc1_block_impl_0 &#123;</span><br><span class="line">  struct __block_impl impl;</span><br><span class="line">  struct __blockFunc1_block_desc_0* Desc;</span><br><span class="line">  int num;</span><br><span class="line">  __blockFunc1_block_impl_0(void *fp, struct __blockFunc1_block_desc_0 *desc, int _num, int flags=0) : num(_num) &#123;</span><br><span class="line">    impl.isa = &amp;_NSConcreteStackBlock;</span><br><span class="line">    impl.Flags = flags;</span><br><span class="line">    impl.FuncPtr = fp;</span><br><span class="line">    Desc = desc;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">static void __blockFunc1_block_func_0(struct __blockFunc1_block_impl_0 *__cself) &#123;</span><br><span class="line">  int num = __cself-&gt;num; // bound by copy</span><br><span class="line"></span><br><span class="line">        NSLog((NSString *)&amp;__NSConstantStringImpl__var_folders_rv_338km0ws0gb2gk132_zrs0wc0000gp_T_main_b5d67f_mi_0, num);</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">void blockFunc1() &#123;</span><br><span class="line">    int num = 100;</span><br><span class="line">    void (*block)(void) = ((void (*)())&amp;__blockFunc1_block_impl_0((void *)__blockFunc1_block_func_0, &amp;__blockFunc1_block_desc_0_DATA, num));</span><br><span class="line">    num = 200;</span><br><span class="line">    ((void (*)(__block_impl *))((__block_impl *)block)-&gt;FuncPtr)((__block_impl *)block);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在这个函数里面，构造block的时候把num传了进去，而且是普通值传递，这样的话其实是拷贝了一份num。然后在执行block方法的时候，使用的是拷贝的那份num，从<code>int num = __cself-&gt;num; // bound by copy</code>可以看出。这个block也是_NSConcreteStackBlock类型的。</p>
-<p>再来看看__block修饰过的num在block里面是怎么传递的，我们看看blockFunc2相关的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">// 封装num的结构</span><br><span class="line">struct __Block_byref_num_0 &#123;</span><br><span class="line">  void *__isa;</span><br><span class="line">__Block_byref_num_0 *__forwarding;</span><br><span class="line"> int __flags;</span><br><span class="line"> int __size;</span><br><span class="line"> int num;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">struct __blockFunc2_block_impl_0 &#123;</span><br><span class="line">  struct __block_impl impl;</span><br><span class="line">  struct __blockFunc2_block_desc_0* Desc;</span><br><span class="line">  __Block_byref_num_0 *num; // by ref</span><br><span class="line">  __blockFunc2_block_impl_0(void *fp, struct __blockFunc2_block_desc_0 *desc, __Block_byref_num_0 *_num, int flags=0) : num(_num-&gt;__forwarding) &#123;</span><br><span class="line">    impl.isa = &amp;_NSConcreteStackBlock;</span><br><span class="line">    impl.Flags = flags;</span><br><span class="line">    impl.FuncPtr = fp;</span><br><span class="line">    Desc = desc;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">static void __blockFunc2_block_func_0(struct __blockFunc2_block_impl_0 *__cself) &#123;</span><br><span class="line">    __Block_byref_num_0 *num = __cself-&gt;num; // bound by ref</span><br><span class="line">    NSLog((NSString *)&amp;__NSConstantStringImpl__var_folders_rv_338km0ws0gb2gk132_zrs0wc0000gp_T_main_b5d67f_mi_1, (num-&gt;__forwarding-&gt;num));</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">void blockFunc2() &#123;</span><br><span class="line">    __attribute__((__blocks__(byref))) __Block_byref_num_0 num = &#123;(void*)0,(__Block_byref_num_0 *)&amp;num, 0, sizeof(__Block_byref_num_0), 100&#125;;</span><br><span class="line">    void (*block)(void) = ((void (*)())&amp;__blockFunc2_block_impl_0((void *)__blockFunc2_block_func_0, &amp;__blockFunc2_block_desc_0_DATA, (__Block_byref_num_0 *)&amp;num, 570425344));</span><br><span class="line">    (num.__forwarding-&gt;num) = 200;</span><br><span class="line">    ((void (*)(__block_impl *))((__block_impl *)block)-&gt;FuncPtr)((__block_impl *)block);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>从代码中可以看到，<strong>block修饰的num在内部被包装成一个</strong>Block_byref_num_0的对象，假设叫a，原来num的值100存储在对象a的num字段中，同时这个对象a有一个<strong>forwarding字段，指向a本身。当改变num的值的时候（源代码是<code>num = 200;</code>），这段代码变为`(num.</strong>forwarding-&gt;num) = 200;<code>，也就是说把对象a里面的num字段的值变为了200。同时，在block的执行函数__blockFunc2_block_func_0中，打印出来的取值是从</code><strong>Block_byref_num_0 *num = </strong>cself-&gt;num;`取出，也就是取得是改变后的值，所以打印结果是200。这就是为什么用__block修饰的变量可以在block内部被修改。</p>
-<p>那当num为全局变量的时候，block又是怎样的呢？请看代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">static void __blockFunc3_block_func_0(struct __blockFunc3_block_impl_0 *__cself) &#123;</span><br><span class="line"></span><br><span class="line">        NSLog((NSString *)&amp;__NSConstantStringImpl__var_folders_rv_338km0ws0gb2gk132_zrs0wc0000gp_T_main_b5d67f_mi_2, num);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">void blockFunc3() &#123;</span><br><span class="line">    void (*block)(void) = ((void (*)())&amp;__blockFunc3_block_impl_0((void *)__blockFunc3_block_func_0, &amp;__blockFunc3_block_desc_0_DATA));</span><br><span class="line">    num = 200;</span><br><span class="line">    ((void (*)(__block_impl *))((__block_impl *)block)-&gt;FuncPtr)((__block_impl *)block);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>从代码里可以看出，这种情况很简单，block对象根本没有num字段，也就是打印的时候直接取得全局的num。</p>
-<p>最后一种情况也很简单，当num时static的时候，构造block对象的时候直接用引用传值的方式把num放到block对象中。所以，当外部改变num的值的时候，也能反映到block内部。代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void blockFunc4()</span><br><span class="line">&#123;</span><br><span class="line">    static int num = 100;</span><br><span class="line">    void (*block)(void) = ((void (*)())&amp;__blockFunc4_block_impl_0((void *)__blockFunc4_block_func_0, &amp;__blockFunc4_block_desc_0_DATA, &amp;num));</span><br><span class="line">    num = 200;</span><br><span class="line">    ((void (*)(__block_impl *))((__block_impl *)block)-&gt;FuncPtr)((__block_impl *)block);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这篇文章主要从源码的角度讲述了block的实现机制，并针对四种情况分析了block是如何引用外部变量的，分别是:<br>1、当引用局部变量的时候，如果没有__block修饰，那么在block内部获取的是外部变量的一份拷贝，改变外部变量不影响block内部的那份拷贝。</p>
-<p>2、当引用局部变量的时候，同时局部变量用__block修饰，那么在block内部使用的实际上是外部变量的一个引用，所以改变外部变量会影响block内部变量的值。</p>
-<p>3、当引用全局变量的时候，block并不持有这个变量。</p>
-<p>4、当引用static变量的时候，block会以引用的方式持有这个变量。当在外部修改这个变量的时候，会影响block内部持有的这个变量的值。</p>
-
-          
+          前言在Objective-C中，block是一个很常见的东西，说白了就是个匿名函数，网上有很多关于block如何使用的文章，讲的都非常精彩，这里主要探讨下block的实现原理。关于如何使用block，请参考网上的教程。
+实例先来新建一个控制台工程，main.m里的代码如下，并思考下最后的输出结果是什
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/27/block-imp/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -598,7 +1158,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="chenjiang">
+      <meta itemprop="name" content="Chenjiang's Blog">
     </span>
 
     
@@ -660,17 +1220,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/27/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -752,7 +1310,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
