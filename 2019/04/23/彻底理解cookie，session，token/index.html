@@ -79,23 +79,23 @@
 
 
 
-<meta name="description" content="发展史1、很久很久以前，Web 基本上就是文档的浏览而已， 既然是浏览，作为服务器， 不需要记录谁在某一段时间里都浏览了什么文档，每次请求都是一个新的HTTP协议， 就是请求加响应，  尤其是我不用记住是谁刚刚发了HTTP请求，   每个请求对我来说都是全新的。这段时间很嗨皮 2、但是随着交互式Web应用的兴起，像在线购物网站，需要登录的网站等等，马上就面临一个问题，那就是要管理会话，必须记住哪些">
+<meta name="description" content="转载：http://www.cnblogs.com/moyand/p/9047978.html发展史1、很久很久以前，Web 基本上就是文档的浏览而已， 既然是浏览，作为服务器， 不需要记录谁在某一段时间里都浏览了什么文档，每次请求都是一个新的HTTP协议， 就是请求加响应，  尤其是我不用记住是谁刚刚发了HTTP请求，   每个请求对我来说都是全新的。这段时间很嗨皮 2、但是随着交互式Web应用">
 <meta name="keywords" content="web 前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="彻底理解cookie，session，token">
 <meta property="og:url" content="http://yoursite.com/2019/04/23/彻底理解cookie，session，token/index.html">
 <meta property="og:site_name" content="Chenjiang&#39;s Blog">
-<meta property="og:description" content="发展史1、很久很久以前，Web 基本上就是文档的浏览而已， 既然是浏览，作为服务器， 不需要记录谁在某一段时间里都浏览了什么文档，每次请求都是一个新的HTTP协议， 就是请求加响应，  尤其是我不用记住是谁刚刚发了HTTP请求，   每个请求对我来说都是全新的。这段时间很嗨皮 2、但是随着交互式Web应用的兴起，像在线购物网站，需要登录的网站等等，马上就面临一个问题，那就是要管理会话，必须记住哪些">
+<meta property="og:description" content="转载：http://www.cnblogs.com/moyand/p/9047978.html发展史1、很久很久以前，Web 基本上就是文档的浏览而已， 既然是浏览，作为服务器， 不需要记录谁在某一段时间里都浏览了什么文档，每次请求都是一个新的HTTP协议， 就是请求加响应，  尤其是我不用记住是谁刚刚发了HTTP请求，   每个请求对我来说都是全新的。这段时间很嗨皮 2、但是随着交互式Web应用">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/04/23/彻底理解cookie，session，token/cluster.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/23/彻底理解cookie，session，token/memcached.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/23/彻底理解cookie，session，token/sign.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/23/彻底理解cookie，session，token/check-sign.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/23/彻底理解cookie，session，token/token-work-flow.png">
-<meta property="og:updated_time" content="2019-04-23T03:47:38.770Z">
+<meta property="og:updated_time" content="2019-04-23T03:57:43.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="彻底理解cookie，session，token">
-<meta name="twitter:description" content="发展史1、很久很久以前，Web 基本上就是文档的浏览而已， 既然是浏览，作为服务器， 不需要记录谁在某一段时间里都浏览了什么文档，每次请求都是一个新的HTTP协议， 就是请求加响应，  尤其是我不用记住是谁刚刚发了HTTP请求，   每个请求对我来说都是全新的。这段时间很嗨皮 2、但是随着交互式Web应用的兴起，像在线购物网站，需要登录的网站等等，马上就面临一个问题，那就是要管理会话，必须记住哪些">
+<meta name="twitter:description" content="转载：http://www.cnblogs.com/moyand/p/9047978.html发展史1、很久很久以前，Web 基本上就是文档的浏览而已， 既然是浏览，作为服务器， 不需要记录谁在某一段时间里都浏览了什么文档，每次请求都是一个新的HTTP协议， 就是请求加响应，  尤其是我不用记住是谁刚刚发了HTTP请求，   每个请求对我来说都是全新的。这段时间很嗨皮 2、但是随着交互式Web应用">
 <meta name="twitter:image" content="http://yoursite.com/2019/04/23/彻底理解cookie，session，token/cluster.png">
 
 
@@ -316,7 +316,7 @@
       
 
       
-        <h2 id="发展史"><a href="#发展史" class="headerlink" title="发展史"></a>发展史</h2><p>1、很久很久以前，Web 基本上就是文档的浏览而已， 既然是浏览，作为服务器， 不需要记录谁在某一段时间里都浏览了什么文档，每次请求都是一个新的HTTP协议， 就是请求加响应，  尤其是我不用记住是谁刚刚发了HTTP请求，   每个请求对我来说都是全新的。这段时间很嗨皮</p>
+        <h4 id="转载：http-www-cnblogs-com-moyand-p-9047978-html"><a href="#转载：http-www-cnblogs-com-moyand-p-9047978-html" class="headerlink" title="转载：http://www.cnblogs.com/moyand/p/9047978.html"></a>转载：<a href="http://www.cnblogs.com/moyand/p/9047978.html" target="_blank" rel="noopener">http://www.cnblogs.com/moyand/p/9047978.html</a></h4><h2 id="发展史"><a href="#发展史" class="headerlink" title="发展史"></a>发展史</h2><p>1、很久很久以前，Web 基本上就是文档的浏览而已， 既然是浏览，作为服务器， 不需要记录谁在某一段时间里都浏览了什么文档，每次请求都是一个新的HTTP协议， 就是请求加响应，  尤其是我不用记住是谁刚刚发了HTTP请求，   每个请求对我来说都是全新的。这段时间很嗨皮</p>
 <p>2、但是随着交互式Web应用的兴起，像在线购物网站，需要登录的网站等等，马上就面临一个问题，那就是要管理会话，必须记住哪些人登录系统，  哪些人往自己的购物车中放商品，  也就是说我必须把每个人区分开，这就是一个不小的挑战，因为HTTP请求是无状态的，所以想出的办法就是给大家发一个会话标识(session id), 说白了就是一个随机的字串，每个人收到的都不一样，  每次大家向我发起HTTP请求的时候，把这个字符串给一并捎过来， 这样我就能区分开谁是谁了</p>
 <p>3、这样大家很嗨皮了，可是服务器就不嗨皮了，每个人只需要保存自己的session id，而服务器要保存所有人的session id ！  如果访问服务器多了， 就得由成千上万，甚至几十万个。</p>
 <p>这对服务器说是一个巨大的开销 ， 严重的限制了服务器扩展能力， 比如说我用两个机器组成了一个集群， 小F通过机器A登录了系统，  那session id会保存在机器A上，  假设小F的下一次请求被转发到机器B怎么办？  机器B可没有小F的 session id啊。</p>
@@ -529,7 +529,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -562,7 +562,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#发展史"><span class="nav-number">1.</span> <span class="nav-text">发展史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie"><span class="nav-number">2.</span> <span class="nav-text">Cookie</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Session"><span class="nav-number">3.</span> <span class="nav-text">Session</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Token"><span class="nav-number">4.</span> <span class="nav-text">Token</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#转载：http-www-cnblogs-com-moyand-p-9047978-html"><span class="nav-number">1.</span> <span class="nav-text">转载：http://www.cnblogs.com/moyand/p/9047978.html</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#发展史"><span class="nav-number"></span> <span class="nav-text">发展史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie"><span class="nav-number"></span> <span class="nav-text">Cookie</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Session"><span class="nav-number"></span> <span class="nav-text">Session</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Token"><span class="nav-number"></span> <span class="nav-text">Token</span></a></li></div>
             
 
           </div>
