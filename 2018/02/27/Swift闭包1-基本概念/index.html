@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="IT9012">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta name="description" content="引言&amp;emsp;&amp;emsp;这篇文章开始主要讲解Swift中闭包（Closures）的一些知识点。本文是这个系列的第一篇。 闭包的基本概念&amp;emsp;&amp;emsp;闭包的就是匿名函数，别的语言也有类似的概念，在Objective-c中就是block，在c++中就是lambdas表达式。闭包可以获取闭包所在的上下文的变量和常量，并在闭包内部使用。在Swift中，全局函数和嵌套函数是特殊的闭包，有3种类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift闭包1-基本概念">
+<meta property="og:url" content="http://yoursite.com/2018/02/27/Swift闭包1-基本概念/index.html">
 <meta property="og:site_name" content="IT9012">
+<meta property="og:description" content="引言&amp;emsp;&amp;emsp;这篇文章开始主要讲解Swift中闭包（Closures）的一些知识点。本文是这个系列的第一篇。 闭包的基本概念&amp;emsp;&amp;emsp;闭包的就是匿名函数，别的语言也有类似的概念，在Objective-c中就是block，在c++中就是lambdas表达式。闭包可以获取闭包所在的上下文的变量和常量，并在闭包内部使用。在Swift中，全局函数和嵌套函数是特殊的闭包，有3种类">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-04-25T12:56:40.155Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IT9012">
+<meta name="twitter:title" content="Swift闭包1-基本概念">
+<meta name="twitter:description" content="引言&amp;emsp;&amp;emsp;这篇文章开始主要讲解Swift中闭包（Closures）的一些知识点。本文是这个系列的第一篇。 闭包的基本概念&amp;emsp;&amp;emsp;闭包的就是匿名函数，别的语言也有类似的概念，在Objective-c中就是block，在c++中就是lambdas表达式。闭包可以获取闭包所在的上下文的变量和常量，并在闭包内部使用。在Swift中，全局函数和嵌套函数是特殊的闭包，有3种类">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/page/2/">
+  <link rel="canonical" href="http://yoursite.com/2018/02/27/Swift闭包1-基本概念/">
 
 
 
 
 
-  <title>IT9012</title>
+  <title>Swift闭包1-基本概念 | IT9012</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,9 +237,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -266,9 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/27/Swift闭包1-基本概念/" itemprop="url">Swift闭包1-基本概念</a></h1>
+          <h1 class="post-title" itemprop="name headline">Swift闭包1-基本概念</h1>
         
 
         <div class="post-meta">
@@ -318,19 +319,27 @@
       
 
       
-        
-          
-          引言&emsp;&emsp;这篇文章开始主要讲解Swift中闭包（Closures）的一些知识点。本文是这个系列的第一篇。
-闭包的基本概念&emsp;&emsp;闭包的就是匿名函数，别的语言也有类似的概念，在Objective-c中就是block，在c++中就是lambdas表达式。闭包可以获取闭包
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/27/Swift闭包1-基本概念/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>&emsp;&emsp;这篇文章开始主要讲解Swift中闭包（Closures）的一些知识点。本文是这个系列的第一篇。</p>
+<h3 id="闭包的基本概念"><a href="#闭包的基本概念" class="headerlink" title="闭包的基本概念"></a>闭包的基本概念</h3><p>&emsp;&emsp;闭包的就是匿名函数，别的语言也有类似的概念，在Objective-c中就是block，在c++中就是lambdas表达式。闭包可以获取闭包所在的上下文的变量和常量，并在闭包内部使用。在Swift中，全局函数和嵌套函数是特殊的闭包，有3种类型。</p>
+<ol>
+<li>全局闭包：定义在全局，不捕获外部变量</li>
+<li>局部闭包：定义在函数内部，会捕获函数里面的变量</li>
+<li>匿名的闭包表达式：可以捕获上下文的变量</li>
+</ol>
+<h3 id="闭包的语法"><a href="#闭包的语法" class="headerlink" title="闭包的语法"></a>闭包的语法</h3><p>&emsp;&emsp;Swift中闭包的定义方式如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123; (parameters) -&gt; return type in</span><br><span class="line">    statements</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;in关键字前面的是闭包的申明部分，类似函数的申明，包括参数的申明和返回值的申明；in后面的部分是闭包的实现。比如swift自带的array的sort函数，调用sort的时候需要传一个compare的闭包进去，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted(by: &#123; (s1: String, s2: String) -&gt; Bool in</span><br><span class="line">    return s1 &gt; s2</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="根据上下文推测类型"><a href="#根据上下文推测类型" class="headerlink" title="根据上下文推测类型"></a>根据上下文推测类型</h3><p>&emsp;&emsp;上面的sort方法传入的是一个很标准的闭包表达式，在swift中，闭包表达式可以更简单，swift可以根据上下文推断出闭包表达式中参数的类型，以及返回值的类型。比如上面的sort函数，传入的闭包肯定是比较array里面的元素，所以闭包参数的类型肯定和array里面的元素类型一样（在这里是String类型），同样的，作为比较函数，返回值肯定是Bool类型。所以，参数类型和返回值类型都可以根据上下文推断出来，那么在闭包里面就可以直接省略。更简介的代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted(by: &#123; s1, s2 in return s1 &gt; s2 &#125; )</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;上面的闭包只需要知道s1和s2就行了，类型可以推断出来。同理，返回值也可以直接省略。</p>
+<h3 id="省略return关键字"><a href="#省略return关键字" class="headerlink" title="省略return关键字"></a>省略return关键字</h3><p>&emsp;&emsp;当闭包的实现只有一行代码的时候，可以省略return关键字。比如在上面的代码中sorted(by:) 函数的定义明确表示需要闭包返回一个Bool类型的值，同时闭包的实现只有一行代码，显然可以判断，这一行代码肯定返回一个Bool类型的值，所以return关键字可以直接省略。</p>
+<h3 id="简写参数名"><a href="#简写参数名" class="headerlink" title="简写参数名"></a>简写参数名</h3><p>&emsp;&emsp;swift可以采用更简洁的方式来定义参数名，例如采用$0,$1,$2等等来引用闭包的参数，如果采用这种参数，in关键字也可以省略掉，最后闭包表达式可以非常简单，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted(by: &#123; $0 &gt; $1 &#125; )</span><br></pre></td></tr></table></figure>
+<p>$0表示第一个参数，$1表示第二个参数。</p>
+<h3 id="运算符函数"><a href="#运算符函数" class="headerlink" title="运算符函数"></a>运算符函数</h3><p>&emsp;&emsp;还有一种更简单的表达方式，因为String定义了大于（&gt;）运算符.</p>
+<p><code>reversedNames = names.sorted(by: &gt;)</code></p>
+
       
     </div>
     
@@ -347,138 +356,32 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/02/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="chenjiang">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/5626978?s=460&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="IT9012">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/02/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-02T19:33:47+08:00">
-                2018-01-02
-              </time>
+              <a href="/2018/01/02/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
+              <a href="/2018/02/27/Swift闭包2-尾闭包/" rel="prev" title="Swift闭包2-尾闭包">
+                Swift闭包2-尾闭包 <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/01/02/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -488,14 +391,11 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -503,6 +403,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -523,8 +427,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -577,6 +490,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包的基本概念"><span class="nav-number">2.</span> <span class="nav-text">闭包的基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包的语法"><span class="nav-number">3.</span> <span class="nav-text">闭包的语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据上下文推测类型"><span class="nav-number">4.</span> <span class="nav-text">根据上下文推测类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#省略return关键字"><span class="nav-number">5.</span> <span class="nav-text">省略return关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简写参数名"><span class="nav-number">6.</span> <span class="nav-text">简写参数名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符函数"><span class="nav-number">7.</span> <span class="nav-text">运算符函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -717,6 +646,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
