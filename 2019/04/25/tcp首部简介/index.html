@@ -88,7 +88,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/04/25/tcp首部简介/ip-packet.png">
 <meta property="og:image" content="http://yoursite.com/2019/04/25/tcp首部简介/tcp-header.png">
-<meta property="og:updated_time" content="2019-04-25T12:56:32.768Z">
+<meta property="og:updated_time" content="2019-04-25T13:10:48.768Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tcp首部简介">
 <meta name="twitter:description" content="简介tcp是面向连接的协议，工作在传输层。无论哪一方向另一方发送数据，都必须先在双方之间建立一条连接。学习tcp，首先要了解tcp的首部结构，因为首部中的每一个字段协议中都有非常重要的作用，下面简单介绍下tcp的首部的一些知识。 TCP首部tcp数据被封装在一个ip数据包中，如下图所示，一个tcp数据报被放在一个ip数据报的数据段。  同时，一个tcp数据报也包含首部和数据部分。tcp首部主要用来">
@@ -329,7 +329,7 @@
 <img src="/2019/04/25/tcp首部简介/tcp-header.png">
 <p>如图所示，tcp首部包含16位的源端口号和16位的目的端口号，注意，tcp首部不需要指定源ip地址和目的ip，因为ip地址是下一层（也就是ip）首部需要考虑的事情。端口号是用来寻找发送端和接收端的应用进程。ip首部中ip地址加上tcp首部的端口号唯一确定一个tcp链接。</p>
 <p>端口号之后是32位的序号（seq）和32位的确认序号（ack）。序号是用来标识从tcp发送端向tcp接收端发送的数据的序号。确认序号表示当前已经收到了确认序号之前数据，需要对端发送从确认序号开始的数据。</p>
-<p>确认序号之后是4位的首部长度，需要这个值是因为tcp首部的长度是可变的，从上面的图可以看出，tcp首部最后是一个32位的可选项。</p>
+<p>确认序号之后是4位的首部长度，需要这个值是因为tcp首部的长度是可变的，从上面的图可以看出，tcp首部最后是一个可选项。</p>
 <p>首部之后是6位的保留位，保留位之后是6位标志位，这个很重要，这六个标志位每一位表示了tcp包的特性，当对应位置为1时表示启用对应的特性，这六个特性分别是：</p>
 <p>1、URG：紧急指针有效<br>2、ACK：确认序号有效<br>3、PSH：接收方应该尽快将这个报文交给应用层<br>4、RST：重建连接<br>5、SYN：同步序号，用来发起一个连接<br>6、FIN：发端完成发送任务，关闭连接</p>
 <p>6个标志位之后是16位的窗口大小，流量控制的时候用的。</p>
