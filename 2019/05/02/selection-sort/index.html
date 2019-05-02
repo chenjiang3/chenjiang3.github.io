@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="简介冒泡排序是一种简单的排序算法。它需要重复的遍历要排序的数列，一次比较两个元素，如何这两个元素顺序错误就把他们交换过来。重复这个过程知道不需要再交换，也就是该数列已经排序完成。 冒泡排序对n个元素进行排序需要O(n^2)次比较次数，并且可以原地排序。 具体算法过程如下：1、比较相邻的元素，如果第一个比第二个大，就交换他们两个。 2、对每一个对相邻的元素做同样的工作，从开始的第一对知道结尾的最后一">
+<meta name="description" content="算法简介相比冒泡排序，选择排序算法思想相对简单，它的工作原理如下，从未排序的序列中找到最小（或最大）的元素，存放到序列的起始位置，然后，再从剩余的序列中找到最小（或最大）的元素，放到已排序序列的末尾，以此类推，直到所有的元素都有序。 相比冒泡排序，选择排序交换元素的次数要少，n个元素的序列最多要n-1次交换。 算法流程假设要对【5, 1, 4, 2, 8】从小到大进行排序。 1、第一步，从【5,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="冒泡排序">
-<meta property="og:url" content="http://it9012.com/2019/04/25/冒泡排序/index.html">
+<meta property="og:title" content="选择排序">
+<meta property="og:url" content="http://it9012.com/2019/05/02/selection-sort/index.html">
 <meta property="og:site_name" content="IT9012">
-<meta property="og:description" content="简介冒泡排序是一种简单的排序算法。它需要重复的遍历要排序的数列，一次比较两个元素，如何这两个元素顺序错误就把他们交换过来。重复这个过程知道不需要再交换，也就是该数列已经排序完成。 冒泡排序对n个元素进行排序需要O(n^2)次比较次数，并且可以原地排序。 具体算法过程如下：1、比较相邻的元素，如果第一个比第二个大，就交换他们两个。 2、对每一个对相邻的元素做同样的工作，从开始的第一对知道结尾的最后一">
+<meta property="og:description" content="算法简介相比冒泡排序，选择排序算法思想相对简单，它的工作原理如下，从未排序的序列中找到最小（或最大）的元素，存放到序列的起始位置，然后，再从剩余的序列中找到最小（或最大）的元素，放到已排序序列的末尾，以此类推，直到所有的元素都有序。 相比冒泡排序，选择排序交换元素的次数要少，n个元素的序列最多要n-1次交换。 算法流程假设要对【5, 1, 4, 2, 8】从小到大进行排序。 1、第一步，从【5,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-02T07:32:22.417Z">
+<meta property="og:updated_time" content="2019-05-02T08:04:46.618Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="冒泡排序">
-<meta name="twitter:description" content="简介冒泡排序是一种简单的排序算法。它需要重复的遍历要排序的数列，一次比较两个元素，如何这两个元素顺序错误就把他们交换过来。重复这个过程知道不需要再交换，也就是该数列已经排序完成。 冒泡排序对n个元素进行排序需要O(n^2)次比较次数，并且可以原地排序。 具体算法过程如下：1、比较相邻的元素，如果第一个比第二个大，就交换他们两个。 2、对每一个对相邻的元素做同样的工作，从开始的第一对知道结尾的最后一">
+<meta name="twitter:title" content="选择排序">
+<meta name="twitter:description" content="算法简介相比冒泡排序，选择排序算法思想相对简单，它的工作原理如下，从未排序的序列中找到最小（或最大）的元素，存放到序列的起始位置，然后，再从剩余的序列中找到最小（或最大）的元素，放到已排序序列的末尾，以此类推，直到所有的元素都有序。 相比冒泡排序，选择排序交换元素的次数要少，n个元素的序列最多要n-1次交换。 算法流程假设要对【5, 1, 4, 2, 8】从小到大进行排序。 1、第一步，从【5,">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://it9012.com/2019/04/25/冒泡排序/">
+  <link rel="canonical" href="http://it9012.com/2019/05/02/selection-sort/">
 
 
 
 
 
-  <title>冒泡排序 | IT9012</title>
+  <title>选择排序 | IT9012</title>
   
 
 
@@ -272,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://it9012.com/2019/04/25/冒泡排序/">
+    <link itemprop="mainEntityOfPage" href="http://it9012.com/2019/05/02/selection-sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="it9012">
@@ -289,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">冒泡排序</h1>
+          <h1 class="post-title" itemprop="name headline">选择排序</h1>
         
 
         <div class="post-meta">
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-25T19:33:47+08:00">
-                2019-04-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-02T15:20:54+08:00">
+                2019-05-02
               </time>
             
 
@@ -342,8 +342,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/04/25/冒泡排序/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/25/冒泡排序/" itemprop="commentCount"></span>
+                <a href="/2019/05/02/selection-sort/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/02/selection-sort/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -371,33 +371,16 @@
       
 
       
-        <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>冒泡排序是一种简单的排序算法。它需要重复的遍历要排序的数列，一次比较两个元素，如何这两个元素顺序错误就把他们交换过来。重复这个过程知道不需要再交换，也就是该数列已经排序完成。</p>
-<p>冒泡排序对n个元素进行排序需要O(n^2)次比较次数，并且可以原地排序。</p>
-<h3 id="具体算法过程如下："><a href="#具体算法过程如下：" class="headerlink" title="具体算法过程如下："></a>具体算法过程如下：</h3><p>1、比较相邻的元素，如果第一个比第二个大，就交换他们两个。</p>
-<p>2、对每一个对相邻的元素做同样的工作，从开始的第一对知道结尾的最后一对，这一趟比较做完之后，最后的元素是最大的数。</p>
-<p>3、对最后一个元素之前的n-1个数据再一次重复上面的步骤，结束之后，能求出第二大的那个元素。</p>
-<p>4、重复上面的步骤，直到没有数据需要比较。</p>
-<h3 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h3><p>假如要对【5, 1, 4, 2, 8】进行排序。算法步骤如下：</p>
-<p>第一次循环，【5, 1, 4, 2, 8】两两比较获得最大值</p>
-<p>1、【5, 1, 4, 2, 8】中5比1大，所以5和1交换，数列变成【1，5，4，2，8】。</p>
-<p>2、5和4比较，5比4大，交换后数列变成【1，4，5，2，8】。</p>
-<p>3、5和2比较，5比2大，交换后数列变成【1，4，2，5，8】。</p>
-<p>4、5和8比较，5比8小，不用交换，最后数列为【1，4，2，5，8】。</p>
-<p>第一次循环把最大的8找出来了，放在最后，接下来进行第二次循环，需要比较的数据是除8之外的数据，也就是【1，4，2，5】</p>
-<p>第二次循环</p>
-<p>1、【1，4，2，5】，1和4比较，1比4小，不用交换，还是【1，4，2，5】。</p>
-<p>2、【1，4，2，5】，4和2比较，4比2大，交换，数列变成【1，2，4，5】。</p>
-<p>3、【1，2，4，5】，4和5比较，4比5小，不用交换，数列还是【1，2，4，5】。</p>
-<p>经过第二次循环，最大的5找出来了。那么第三次循环的数据便是【1，2，4】</p>
-<p>第三次循环</p>
-<p>1、【1，2，4】，1和2比较，1比2小，不交换，数列还是【1，2，4】。</p>
-<p>2、【1，2，4】，2和4比较，2比4小，不交换，数列还是【1，2，4】</p>
-<p>经过第三次循环后，4找出来了，那么第四次循环的数列是【1，2】。</p>
-<p>第四次循环</p>
-<p>1、【1，2】，1和2比较，1比2小，不交换，数列还是【1，2】。</p>
-<p>所以，经过4次循环，数据已经是有序的了，顺序为【1，2，4，5，8】。</p>
-<h3 id="C-源代码"><a href="#C-源代码" class="headerlink" title="C++源代码"></a>C++源代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; size - <span class="number">1</span> - i; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (a[j] &gt; a[j + <span class="number">1</span>]) &#123;</span><br><span class="line">                <span class="keyword">int</span> tmp = a[j];</span><br><span class="line">                a[j] = a[j + <span class="number">1</span>];</span><br><span class="line">                a[j + <span class="number">1</span>] = tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> * argv[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">5</span>] = &#123;<span class="number">5</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">8</span>&#125;;</span><br><span class="line">    bubbleSort(a, <span class="number">5</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h2 id="算法简介"><a href="#算法简介" class="headerlink" title="算法简介"></a>算法简介</h2><p>相比冒泡排序，选择排序算法思想相对简单，它的工作原理如下，从未排序的序列中找到最小（或最大）的元素，存放到序列的起始位置，然后，再从剩余的序列中找到最小（或最大）的元素，放到已排序序列的末尾，以此类推，直到所有的元素都有序。</p>
+<p>相比冒泡排序，选择排序交换元素的次数要少，n个元素的序列最多要n-1次交换。</p>
+<h2 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h2><p>假设要对【5, 1, 4, 2, 8】从小到大进行排序。</p>
+<p>1、第一步，从【5, 1, 4, 2, 8】中找到最小数，当前为1，则和5交换，序列变成【1，5，4，2，8】，【1】为有序序列，【5，4，2，8】为无序序列。</p>
+<p>2、从【5，4，2，8】中找到最小的2，放到已经有序的序列【1】末尾，则原序列变成【1，2，4，5，8】，【1，2】为有序序列，【4，5，8】为无序序列。</p>
+<p>3、从【4，5，8】中找到最小的4，放到有序序列后面，原序列变成【1，2，4，5，8】，【1，2，4】为有序序列，【5，8】为无序序列。</p>
+<p>4、从【5，8】中找到最小的5，放到有序序列后面，原序列变成【1，2，4，5，8】，有序序列为【1，2，4，5】，无序序列为【8】。</p>
+<p>5、最后把8放到有序序列后面，排序结束。</p>
+<p>从上面的排序流程可看出，选择排序就是从无序的序列中找出最小（最大）的数，依次放到有序序列中即可。</p>
+<h3 id="C-实现"><a href="#C-实现" class="headerlink" title="C++实现"></a>C++实现</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectionSort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> idx = i;</span><br><span class="line">        <span class="keyword">int</span> minValue = a[i];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; size - <span class="number">1</span>; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (a[j] &lt; minValue) &#123;</span><br><span class="line">                idx = j;</span><br><span class="line">                minValue = a[j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (idx != i) &#123;</span><br><span class="line">            <span class="keyword">int</span> tmp = a[i];</span><br><span class="line">            a[i] = a[idx];</span><br><span class="line">            a[idx] = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> * argv[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">5</span>] = &#123;<span class="number">5</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">8</span>&#125;;</span><br><span class="line">    selectionSort(a, <span class="number">5</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -417,7 +400,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://it9012.com/2019/04/25/冒泡排序/" title="冒泡排序">http://it9012.com/2019/04/25/冒泡排序/</a>
+    <a href="http://it9012.com/2019/05/02/selection-sort/" title="选择排序">http://it9012.com/2019/05/02/selection-sort/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -439,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/24/虚函数与多态/" rel="next" title="虚函数与多态">
-                <i class="fa fa-chevron-left"></i> 虚函数与多态
+              <a href="/2019/04/26/tcp三次握手和四次挥手/" rel="next" title="tcp三次握手和四次挥手">
+                <i class="fa fa-chevron-left"></i> tcp三次握手和四次挥手
               </a>
             
           </div>
@@ -448,10 +431,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/25/tcp首部简介/" rel="prev" title="tcp首部简介">
-                tcp首部简介 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -588,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体算法过程如下："><span class="nav-number">2.</span> <span class="nav-text">具体算法过程如下：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#举个例子"><span class="nav-number">3.</span> <span class="nav-text">举个例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-源代码"><span class="nav-number">4.</span> <span class="nav-text">C++源代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法简介"><span class="nav-number">1.</span> <span class="nav-text">算法简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法流程"><span class="nav-number">2.</span> <span class="nav-text">算法流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#C-实现"><span class="nav-number">2.1.</span> <span class="nav-text">C++实现</span></a></li></ol></li></ol></div>
             
 
           </div>
