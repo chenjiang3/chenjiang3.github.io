@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="引言&amp;emsp;&amp;emsp;上一片文章讲解了swift中闭包的基本概念，以及基本的语法，这篇文章主要讲解一下swift中尾闭包。 什么是尾闭包&amp;emsp;&amp;emsp;假设有这样一个函数：这个函数的最后一个参数是一个闭包，并且，这个闭包表达式很长。如果按照正常的方式来调用这个函数的话，需要在参数里指明这个函数的参数名，然后后面跟着一个闭包表达式。比如下面这种函数： 123func someFunct">
+<meta name="description" content="算法简介插入排序很简单，有点打斗地主整理牌的阶段，想象一下斗地主摸排的情景，手中的牌是有序的，摸到一张牌之后便插入到合适的位置，使手中的牌依然有序。 插入排序的工作原理是通过构建有序序列，对未排序的数据，在已排序的序列中从后向前扫描，找到相应的位置插入，使插入后的序列依然有序。插入排序需要反复的把已排序的元素向后挪动位置，为新元素的插入提供空间。 插入的排序的时间复杂度和冒泡排序一样，也是O(n^">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swift闭包2-尾闭包">
-<meta property="og:url" content="http://it9012.com/2018/02/27/Swift闭包2-尾闭包/index.html">
+<meta property="og:title" content="插入排序">
+<meta property="og:url" content="http://it9012.com/2019/05/02/insertion-sort/index.html">
 <meta property="og:site_name" content="IT9012">
-<meta property="og:description" content="引言&amp;emsp;&amp;emsp;上一片文章讲解了swift中闭包的基本概念，以及基本的语法，这篇文章主要讲解一下swift中尾闭包。 什么是尾闭包&amp;emsp;&amp;emsp;假设有这样一个函数：这个函数的最后一个参数是一个闭包，并且，这个闭包表达式很长。如果按照正常的方式来调用这个函数的话，需要在参数里指明这个函数的参数名，然后后面跟着一个闭包表达式。比如下面这种函数： 123func someFunct">
+<meta property="og:description" content="算法简介插入排序很简单，有点打斗地主整理牌的阶段，想象一下斗地主摸排的情景，手中的牌是有序的，摸到一张牌之后便插入到合适的位置，使手中的牌依然有序。 插入排序的工作原理是通过构建有序序列，对未排序的数据，在已排序的序列中从后向前扫描，找到相应的位置插入，使插入后的序列依然有序。插入排序需要反复的把已排序的元素向后挪动位置，为新元素的插入提供空间。 插入的排序的时间复杂度和冒泡排序一样，也是O(n^">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-30T08:08:30.221Z">
+<meta property="og:updated_time" content="2019-05-03T11:30:07.986Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swift闭包2-尾闭包">
-<meta name="twitter:description" content="引言&amp;emsp;&amp;emsp;上一片文章讲解了swift中闭包的基本概念，以及基本的语法，这篇文章主要讲解一下swift中尾闭包。 什么是尾闭包&amp;emsp;&amp;emsp;假设有这样一个函数：这个函数的最后一个参数是一个闭包，并且，这个闭包表达式很长。如果按照正常的方式来调用这个函数的话，需要在参数里指明这个函数的参数名，然后后面跟着一个闭包表达式。比如下面这种函数： 123func someFunct">
+<meta name="twitter:title" content="插入排序">
+<meta name="twitter:description" content="算法简介插入排序很简单，有点打斗地主整理牌的阶段，想象一下斗地主摸排的情景，手中的牌是有序的，摸到一张牌之后便插入到合适的位置，使手中的牌依然有序。 插入排序的工作原理是通过构建有序序列，对未排序的数据，在已排序的序列中从后向前扫描，找到相应的位置插入，使插入后的序列依然有序。插入排序需要反复的把已排序的元素向后挪动位置，为新元素的插入提供空间。 插入的排序的时间复杂度和冒泡排序一样，也是O(n^">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://it9012.com/2018/02/27/Swift闭包2-尾闭包/">
+  <link rel="canonical" href="http://it9012.com/2019/05/02/insertion-sort/">
 
 
 
 
 
-  <title>Swift闭包2-尾闭包 | IT9012</title>
+  <title>插入排序 | IT9012</title>
   
 
 
@@ -272,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://it9012.com/2018/02/27/Swift闭包2-尾闭包/">
+    <link itemprop="mainEntityOfPage" href="http://it9012.com/2019/05/02/insertion-sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="it9012">
@@ -289,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Swift闭包2-尾闭包</h1>
+          <h1 class="post-title" itemprop="name headline">插入排序</h1>
         
 
         <div class="post-meta">
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-27T13:51:18+08:00">
-                2018-02-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-02T19:19:30+08:00">
+                2019-05-02
               </time>
             
 
@@ -324,8 +324,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
+                  <a href="/categories/算法数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">算法数据结构</span>
                   </a>
                 </span>
 
@@ -342,8 +342,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/02/27/Swift闭包2-尾闭包/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/02/27/Swift闭包2-尾闭包/" itemprop="commentCount"></span>
+                <a href="/2019/05/02/insertion-sort/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/02/insertion-sort/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -371,17 +371,15 @@
       
 
       
-        <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>&emsp;&emsp;上一片文章讲解了swift中闭包的基本概念，以及基本的语法，这篇文章主要讲解一下swift中尾闭包。</p>
-<h3 id="什么是尾闭包"><a href="#什么是尾闭包" class="headerlink" title="什么是尾闭包"></a>什么是尾闭包</h3><p>&emsp;&emsp;假设有这样一个函数：这个函数的最后一个参数是一个闭包，并且，这个闭包表达式很长。如果按照正常的方式来调用这个函数的话，需要在参数里指明这个函数的参数名，然后后面跟着一个闭包表达式。比如下面这种函数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func someFunctionThatTakesAClosure(closure: () -&gt; Void) &#123;</span><br><span class="line">    // function body goes here</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>正常的使用方式如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 正常的调用方式:</span><br><span class="line"></span><br><span class="line">someFunctionThatTakesAClosure(closure: &#123;</span><br><span class="line">    // closure&apos;s body goes here</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>可以发现someFunctionThatTakesAClosure(closure:)最一个参数是一个闭包，那么我们可以用另外一种方式去调用这个函数。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 用尾闭包的方式调用:</span><br><span class="line"></span><br><span class="line">someFunctionThatTakesAClosure() &#123;</span><br><span class="line">    // trailing closure&apos;s body goes here</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Swift的Array的sort函数也可以采用尾闭包的方式来调用，比如<a href="https://chenjiang3.github.io/2016/09/Swift-closure-1/" target="_blank" rel="noopener">上一篇</a>文章对字符串数组排序的方法。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted() &#123; $0 &gt; $1 &#125;</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;如果一个函数只有一个参数，并且这个参数是一个闭包，那么在使用这个函数的时候可以省略括号，比如上面的sorted函数可以写成这样：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reversedNames = names.sorted &#123; $0 &gt; $1 &#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="算法简介"><a href="#算法简介" class="headerlink" title="算法简介"></a>算法简介</h2><p>插入排序很简单，有点打斗地主整理牌的阶段，想象一下斗地主摸排的情景，手中的牌是有序的，摸到一张牌之后便插入到合适的位置，使手中的牌依然有序。</p>
+<p>插入排序的工作原理是通过构建有序序列，对未排序的数据，在已排序的序列中从后向前扫描，找到相应的位置插入，使插入后的序列依然有序。插入排序需要反复的把已排序的元素向后挪动位置，为新元素的插入提供空间。</p>
+<p>插入的排序的时间复杂度和冒泡排序一样，也是O(n^2)。</p>
+<h2 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h2><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>假设要对【5, 1, 4, 2, 8】从小到大进行排序。</p>
+<p>1、第一步，【5】是有序的，选取1进行插入，1比5小，则5向后移动一位，把1插到5的前面。序列变成【1，5，4，2，8】。</p>
+<p>2、第二步，【1，5】是有序的，选取4进行插入，4比5小，5向后移动，把4插入到1和5之间。序列变成【1，4，5，2，8】。</p>
+<p>3、第三步，【1，4，5】是有序的，选取2进行插入，2比4、5都小，则4、5需要向后移动，然后把2插入到4的前面。序列变成【1，2，4，5，8】。</p>
+<p>8、第四步，【1，2，4，5】有序，选8进行插入，8比5大，不用移动，直接放到5的后面。序列变成【1，2，4，5，8】，排序完成。</p>
+<h3 id="C-实现"><a href="#C-实现" class="headerlink" title="C++实现"></a>C++实现</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertionSort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; size; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> key = a[i];</span><br><span class="line">        <span class="keyword">int</span> j = i - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> ((j &gt;= <span class="number">0</span>) &amp;&amp; (a[j] &gt; key)) &#123;</span><br><span class="line">            a[j + <span class="number">1</span>] = a[j];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        a[j + <span class="number">1</span>] = key;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> * argv[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">5</span>] = &#123;<span class="number">5</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">8</span>&#125;;</span><br><span class="line">    insertionSort(a, <span class="number">5</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -402,7 +400,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://it9012.com/2018/02/27/Swift闭包2-尾闭包/" title="Swift闭包2-尾闭包">http://it9012.com/2018/02/27/Swift闭包2-尾闭包/</a>
+    <a href="http://it9012.com/2019/05/02/insertion-sort/" title="插入排序">http://it9012.com/2019/05/02/insertion-sort/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -424,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/27/Swift闭包1-基本概念/" rel="next" title="Swift闭包1-基本概念">
-                <i class="fa fa-chevron-left"></i> Swift闭包1-基本概念
+              <a href="/2019/05/02/selection-sort/" rel="next" title="选择排序">
+                <i class="fa fa-chevron-left"></i> 选择排序
               </a>
             
           </div>
@@ -433,10 +431,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/27/Swift闭包3-逃逸闭包/" rel="prev" title="Swift闭包3-逃逸闭包">
-                Swift闭包3-逃逸闭包 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -573,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是尾闭包"><span class="nav-number">2.</span> <span class="nav-text">什么是尾闭包</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法简介"><span class="nav-number">1.</span> <span class="nav-text">算法简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法流程"><span class="nav-number">2.</span> <span class="nav-text">算法流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#流程"><span class="nav-number">2.1.</span> <span class="nav-text">流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-实现"><span class="nav-number">2.2.</span> <span class="nav-text">C++实现</span></a></li></ol></li></ol></div>
             
 
           </div>

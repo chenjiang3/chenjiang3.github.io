@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="算法简介相比冒泡排序，选择排序算法思想相对简单，它的工作原理如下，从未排序的序列中找到最小（或最大）的元素，存放到序列的起始位置，然后，再从剩余的序列中找到最小（或最大）的元素，放到已排序序列的末尾，以此类推，直到所有的元素都有序。 相比冒泡排序，选择排序交换元素的次数要少，n个元素的序列最多要n-1次交换。 算法流程假设要对【5, 1, 4, 2, 8】从小到大进行排序。 1、第一步，从【5,">
+<meta name="description" content="算法简介相比冒泡排序，选择排序算法思想相对简单，它的工作原理如下，从未排序的序列中找到最小（或最大）的元素，存放到序列的起始位置，然后，再从剩余的序列中找到最小（或最大）的元素，放到已排序序列的末尾，以此类推，直到所有的元素都有序。 相比冒泡排序，选择排序交换元素的次数要少，n个元素的序列最多要n-1次交换。 选择排序和冒泡排序一样，时间复杂度是O(n^2)。 算法流程流程假设要对【5, 1, 4">
 <meta property="og:type" content="article">
 <meta property="og:title" content="选择排序">
 <meta property="og:url" content="http://it9012.com/2019/05/02/selection-sort/index.html">
 <meta property="og:site_name" content="IT9012">
-<meta property="og:description" content="算法简介相比冒泡排序，选择排序算法思想相对简单，它的工作原理如下，从未排序的序列中找到最小（或最大）的元素，存放到序列的起始位置，然后，再从剩余的序列中找到最小（或最大）的元素，放到已排序序列的末尾，以此类推，直到所有的元素都有序。 相比冒泡排序，选择排序交换元素的次数要少，n个元素的序列最多要n-1次交换。 算法流程假设要对【5, 1, 4, 2, 8】从小到大进行排序。 1、第一步，从【5,">
+<meta property="og:description" content="算法简介相比冒泡排序，选择排序算法思想相对简单，它的工作原理如下，从未排序的序列中找到最小（或最大）的元素，存放到序列的起始位置，然后，再从剩余的序列中找到最小（或最大）的元素，放到已排序序列的末尾，以此类推，直到所有的元素都有序。 相比冒泡排序，选择排序交换元素的次数要少，n个元素的序列最多要n-1次交换。 选择排序和冒泡排序一样，时间复杂度是O(n^2)。 算法流程流程假设要对【5, 1, 4">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-02T08:04:46.618Z">
+<meta property="og:updated_time" content="2019-05-02T11:56:40.325Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="选择排序">
-<meta name="twitter:description" content="算法简介相比冒泡排序，选择排序算法思想相对简单，它的工作原理如下，从未排序的序列中找到最小（或最大）的元素，存放到序列的起始位置，然后，再从剩余的序列中找到最小（或最大）的元素，放到已排序序列的末尾，以此类推，直到所有的元素都有序。 相比冒泡排序，选择排序交换元素的次数要少，n个元素的序列最多要n-1次交换。 算法流程假设要对【5, 1, 4, 2, 8】从小到大进行排序。 1、第一步，从【5,">
+<meta name="twitter:description" content="算法简介相比冒泡排序，选择排序算法思想相对简单，它的工作原理如下，从未排序的序列中找到最小（或最大）的元素，存放到序列的起始位置，然后，再从剩余的序列中找到最小（或最大）的元素，放到已排序序列的末尾，以此类推，直到所有的元素都有序。 相比冒泡排序，选择排序交换元素的次数要少，n个元素的序列最多要n-1次交换。 选择排序和冒泡排序一样，时间复杂度是O(n^2)。 算法流程流程假设要对【5, 1, 4">
 
 
 
@@ -373,7 +373,8 @@
       
         <h2 id="算法简介"><a href="#算法简介" class="headerlink" title="算法简介"></a>算法简介</h2><p>相比冒泡排序，选择排序算法思想相对简单，它的工作原理如下，从未排序的序列中找到最小（或最大）的元素，存放到序列的起始位置，然后，再从剩余的序列中找到最小（或最大）的元素，放到已排序序列的末尾，以此类推，直到所有的元素都有序。</p>
 <p>相比冒泡排序，选择排序交换元素的次数要少，n个元素的序列最多要n-1次交换。</p>
-<h2 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h2><p>假设要对【5, 1, 4, 2, 8】从小到大进行排序。</p>
+<p>选择排序和冒泡排序一样，时间复杂度是O(n^2)。</p>
+<h2 id="算法流程"><a href="#算法流程" class="headerlink" title="算法流程"></a>算法流程</h2><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>假设要对【5, 1, 4, 2, 8】从小到大进行排序。</p>
 <p>1、第一步，从【5, 1, 4, 2, 8】中找到最小数，当前为1，则和5交换，序列变成【1，5，4，2，8】，【1】为有序序列，【5，4，2，8】为无序序列。</p>
 <p>2、从【5，4，2，8】中找到最小的2，放到已经有序的序列【1】末尾，则原序列变成【1，2，4，5，8】，【1，2】为有序序列，【4，5，8】为无序序列。</p>
 <p>3、从【4，5，8】中找到最小的4，放到有序序列后面，原序列变成【1，2，4，5，8】，【1，2，4】为有序序列，【5，8】为无序序列。</p>
@@ -431,6 +432,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/02/insertion-sort/" rel="prev" title="插入排序">
+                插入排序 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -512,7 +517,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -567,7 +572,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法简介"><span class="nav-number">1.</span> <span class="nav-text">算法简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法流程"><span class="nav-number">2.</span> <span class="nav-text">算法流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#C-实现"><span class="nav-number">2.1.</span> <span class="nav-text">C++实现</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法简介"><span class="nav-number">1.</span> <span class="nav-text">算法简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法流程"><span class="nav-number">2.</span> <span class="nav-text">算法流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#流程"><span class="nav-number">2.1.</span> <span class="nav-text">流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-实现"><span class="nav-number">2.2.</span> <span class="nav-text">C++实现</span></a></li></ol></li></ol></div>
             
 
           </div>
