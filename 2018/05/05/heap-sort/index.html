@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="简介快速排序最早由东尼·霍尔提出，又称划分交换排序，算法采用了一种分治的策略来实现。 分治法的基本思想是：将原问题分解为若干个规模更小的、与原问题相似的子问题，递归的解决这些子问题，然后将子问题的解合并为原问题的解。 快排的算法如下： 1、在待排序的序列中，选择一个元素作为“基准（pivot）” 2、所有小于“基准”的元素，都移到“基准”的左边；所有大于“基准”的元素，都移到“基准”的右边。这个操">
+<meta name="description" content="简介堆排序是使用堆这种数据结构所设计的一种排序算法。堆是一个类似完全二叉树的结构，有如下性质：子节点和值总是大于或者小于父节点的值。 大顶堆：子节点的值永远小于父节点的值，所以根节点的值是堆中的最大值。 小顶堆：子节点的值永远大于父节点的值，所以根节点的值是堆中最小的值。 堆排序的：（假设从小到大排序） 1、首先对整个序列建立一个大顶堆，根元素是整个序列的最大值。 2、根元素和最后的元素交换，交换">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速排序">
-<meta property="og:url" content="http://it9012.com/2018/05/05/quick-sort/index.html">
+<meta property="og:title" content="堆排序">
+<meta property="og:url" content="http://it9012.com/2018/05/05/heap-sort/index.html">
 <meta property="og:site_name" content="IT9012">
-<meta property="og:description" content="简介快速排序最早由东尼·霍尔提出，又称划分交换排序，算法采用了一种分治的策略来实现。 分治法的基本思想是：将原问题分解为若干个规模更小的、与原问题相似的子问题，递归的解决这些子问题，然后将子问题的解合并为原问题的解。 快排的算法如下： 1、在待排序的序列中，选择一个元素作为“基准（pivot）” 2、所有小于“基准”的元素，都移到“基准”的左边；所有大于“基准”的元素，都移到“基准”的右边。这个操">
+<meta property="og:description" content="简介堆排序是使用堆这种数据结构所设计的一种排序算法。堆是一个类似完全二叉树的结构，有如下性质：子节点和值总是大于或者小于父节点的值。 大顶堆：子节点的值永远小于父节点的值，所以根节点的值是堆中的最大值。 小顶堆：子节点的值永远大于父节点的值，所以根节点的值是堆中最小的值。 堆排序的：（假设从小到大排序） 1、首先对整个序列建立一个大顶堆，根元素是整个序列的最大值。 2、根元素和最后的元素交换，交换">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-05T02:57:32.034Z">
+<meta property="og:image" content="http://it9012.com/2018/05/05/heap-sort/heap-sort.jpeg">
+<meta property="og:updated_time" content="2019-05-05T06:24:46.160Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速排序">
-<meta name="twitter:description" content="简介快速排序最早由东尼·霍尔提出，又称划分交换排序，算法采用了一种分治的策略来实现。 分治法的基本思想是：将原问题分解为若干个规模更小的、与原问题相似的子问题，递归的解决这些子问题，然后将子问题的解合并为原问题的解。 快排的算法如下： 1、在待排序的序列中，选择一个元素作为“基准（pivot）” 2、所有小于“基准”的元素，都移到“基准”的左边；所有大于“基准”的元素，都移到“基准”的右边。这个操">
+<meta name="twitter:title" content="堆排序">
+<meta name="twitter:description" content="简介堆排序是使用堆这种数据结构所设计的一种排序算法。堆是一个类似完全二叉树的结构，有如下性质：子节点和值总是大于或者小于父节点的值。 大顶堆：子节点的值永远小于父节点的值，所以根节点的值是堆中的最大值。 小顶堆：子节点的值永远大于父节点的值，所以根节点的值是堆中最小的值。 堆排序的：（假设从小到大排序） 1、首先对整个序列建立一个大顶堆，根元素是整个序列的最大值。 2、根元素和最后的元素交换，交换">
+<meta name="twitter:image" content="http://it9012.com/2018/05/05/heap-sort/heap-sort.jpeg">
 
 
 
@@ -119,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://it9012.com/2018/05/05/quick-sort/">
+  <link rel="canonical" href="http://it9012.com/2018/05/05/heap-sort/">
 
 
 
 
 
-  <title>快速排序 | IT9012</title>
+  <title>堆排序 | IT9012</title>
   
 
 
@@ -272,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://it9012.com/2018/05/05/quick-sort/">
+    <link itemprop="mainEntityOfPage" href="http://it9012.com/2018/05/05/heap-sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="it9012">
@@ -289,7 +291,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">快速排序</h2>
+          <h2 class="post-title" itemprop="name headline">堆排序</h2>
         
 
         <div class="post-meta">
@@ -301,7 +303,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-05T10:37:42+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-05T13:54:33+08:00">
                 2018-05-05
               </time>
             
@@ -342,8 +344,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/05/05/quick-sort/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/05/quick-sort/" itemprop="commentCount"></span>
+                <a href="/2018/05/05/heap-sort/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/05/05/heap-sort/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -371,13 +373,16 @@
       
 
       
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>快速排序最早由东尼·霍尔提出，又称划分交换排序，算法采用了一种分治的策略来实现。</p>
-<p>分治法的基本思想是：将原问题分解为若干个规模更小的、与原问题相似的子问题，递归的解决这些子问题，然后将子问题的解合并为原问题的解。</p>
-<p>快排的算法如下：</p>
-<p>1、在待排序的序列中，选择一个元素作为“基准（pivot）”</p>
-<p>2、所有小于“基准”的元素，都移到“基准”的左边；所有大于“基准”的元素，都移到“基准”的右边。这个操作叫做“分区”操作，分区操作结束后，获得基准元素的位置，这个位置也是基准元素在最终排序后的位置。</p>
-<p>3、分区后，基准元素前面的数据组成的子集都小于基准元素，基准元素后面的元素组成的子集都大于基准元素。对这个两个不断递归重复第1步和第2步，直到所有子集只剩下一个元素为止。</p>
-<h2 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> &amp;a, <span class="keyword">int</span> &amp;b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = tmp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 分区操作</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> left, <span class="keyword">int</span> right, <span class="keyword">int</span> pivotIndex)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pivotValue = a[pivotIndex];</span><br><span class="line">    swap(a[right], a[pivotIndex]);</span><br><span class="line">    <span class="keyword">int</span> storeIndex = left;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = left; i &lt;= right - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (a[i] &lt; pivotValue) &#123;</span><br><span class="line">            swap(a[i], a[storeIndex]);</span><br><span class="line">            storeIndex++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    swap(a[storeIndex], a[right]);</span><br><span class="line">    <span class="keyword">return</span> storeIndex;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (right &lt; left) &#123;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> pivotIndex = partition(a, <span class="number">0</span>, right, right); <span class="comment">// 选最后边的元素为基准</span></span><br><span class="line">    quickSort(a, <span class="number">0</span>, pivotIndex - <span class="number">1</span>);</span><br><span class="line">    quickSort(a, pivotIndex + <span class="number">1</span>, right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> * argv[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">5</span>] = &#123;<span class="number">5</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">8</span>&#125;;</span><br><span class="line">    quickSort(a, <span class="number">0</span>, <span class="number">4</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>堆排序是使用堆这种数据结构所设计的一种排序算法。堆是一个类似完全二叉树的结构，有如下性质：子节点和值总是大于或者小于父节点的值。</p>
+<p>大顶堆：子节点的值永远小于父节点的值，所以根节点的值是堆中的最大值。</p>
+<p>小顶堆：子节点的值永远大于父节点的值，所以根节点的值是堆中最小的值。</p>
+<p>堆排序的：（假设从小到大排序）</p>
+<p>1、首先对整个序列建立一个大顶堆，根元素是整个序列的最大值。</p>
+<p>2、根元素和最后的元素交换，交换后，除去末尾的元素，剩余的元素再次调整为一个大顶堆。</p>
+<p>3、对新的大顶堆，重复以上过程，知道堆中只有一个元素，此时，原序列排序完成。</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>假设对【5，1，4，2，8】进行排序。具体过程如下图：<br><img src="/2018/05/05/heap-sort/heap-sort.jpeg"></p>
+<p>c++ 代码如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> &amp;a, <span class="keyword">int</span> &amp;b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> tmp = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = tmp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">heapAdjust</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> parent = start;</span><br><span class="line">    <span class="keyword">int</span> child = <span class="number">2</span> * start + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (child &lt;= end) &#123;</span><br><span class="line">        <span class="keyword">if</span> (child + <span class="number">1</span> &lt;= end &amp;&amp; a[child] &lt; a[child + <span class="number">1</span>]) &#123;</span><br><span class="line">            child++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (a[parent] &gt; a[child]) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        swap(a[parent], a[child]);</span><br><span class="line">        parent = child;</span><br><span class="line">        child = <span class="number">2</span> * parent + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">heapSort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> size)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = size / <span class="number">2</span> - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        heapAdjust(a, i, size - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = size - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">        swap(a[i], a[<span class="number">0</span>]);</span><br><span class="line">        heapAdjust(a, <span class="number">0</span>, i - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> * argv[])</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">5</span>] = &#123;<span class="number">5</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">8</span>&#125;;</span><br><span class="line">    heapSort(a, <span class="number">5</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -398,7 +403,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://it9012.com/2018/05/05/quick-sort/" title="快速排序">http://it9012.com/2018/05/05/quick-sort/</a>
+    <a href="http://it9012.com/2018/05/05/heap-sort/" title="堆排序">http://it9012.com/2018/05/05/heap-sort/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -420,8 +425,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/02/insertion-sort/" rel="next" title="插入排序">
-                <i class="fa fa-chevron-left"></i> 插入排序
+              <a href="/2018/05/05/quick-sort/" rel="next" title="快速排序">
+                <i class="fa fa-chevron-left"></i> 快速排序
               </a>
             
           </div>
@@ -430,8 +435,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/05/heap-sort/" rel="prev" title="堆排序">
-                堆排序 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/27/block-imp/" rel="prev" title="Objective-c Block 实现机制">
+                Objective-c Block 实现机制 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -569,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法实现"><span class="nav-number">2.</span> <span class="nav-text">算法实现</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程"><span class="nav-number">2.</span> <span class="nav-text">流程</span></a></li></ol></div>
             
 
           </div>
