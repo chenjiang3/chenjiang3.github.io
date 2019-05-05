@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Allow: /home/
+Allow: /categories/
+Allow: /archives/ 
+Allow: /about/ 
+Disallow: /vendors/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+
+Sitemap: http://it9012.com/sitemap.xml
+Sitemap: http://it9012.com/baidusitemap.xml
